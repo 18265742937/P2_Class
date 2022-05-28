@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>旭日图</title>
+</head>
+
+<body>
+    <div id="sunburst1" style="width: 100%;height:400px;"></div>
+    <div id="sunburst2" style="width: 100%;height:400px;"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts-wordcloud.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        // 课程表数据
+        var classCard = [{
+            "name": "上午",
+            "children": [{
+                "name": "数学",
+                "value": 2
+            }, {
+                "name": "语文",
+                "value": 2
+            }, {
+                "name": "英语",
+                "value": 1
+            }]
+        }, {
+            "name": "下午",
+            "children": [{
+                "name": "体育",
+                "value": 1
+            }, {
+                "name": "音乐",
+                "value": 1
+            }, {
+                "name": "自习",
+                "value": 2
+            }]
+        }]
+        Chart.createSunburst('sunburst1', classCard);   // 绘图
+
+
+        // 书籍分类数据
+        var sundata = [{
+            "name": "虚构",
+            "children": [{
+                "name": "小说",
+                "value": 10
+            }, {
+                "name": "其他",
+                "value": 8
+            }]}, 
+
+            {
+            "name": "非虚构",
+            "children": [{
+                "name": "设计",
+                "value": 7
+            }, {
+                "name": "社科",
+                "value": 9
+            }, {
+                "name": "心理",
+                "value": 5
+            }, {
+                "name": "居家",
+                "value": 4
+            }, {
+                "name": "绘本",
+                "value": 5
+            }, {
+                "name": "哲学",
+                "value": 2
+            }, {
+                "name": "技术",
+                "value": 3
+            }]
+        }]
+        // 绘图
+        Chart.createSunburst('sunburst2', sundata);
+    </script>
+</body>
+
+</html>

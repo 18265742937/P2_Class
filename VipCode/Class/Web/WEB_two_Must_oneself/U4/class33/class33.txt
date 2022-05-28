@@ -1,0 +1,20 @@
+本节课的主要内容是安装虚拟环境以及Flask
+
+
+
+安装好虚拟环境, 在虚拟环境内部如何如何安装库 :
+
+pipenv  --three  创建虚拟空间
+
+pipenv  shell   激活虚拟环境(进入)
+
+pipenv  install   安装
+
+pipenv  uninstall   卸载
+
+
+pipenv  --venv   查看虚拟环境所在的位置
+
+pip list  查看虚拟环境内部已经安装的第三方库
+
+

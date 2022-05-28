@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百科全书</title>
+    <!-- class 09 开始 -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <!-- class 09 结束 -->
+
+    <link rel="stylesheet" href="/static/css/turn.css" />
+
+    <style>
+        .sp {
+            padding: 70px 40px;
+            font-size: 16px;
+            height: 100%;
+        }
+        
+        .podd {
+            background-image: url('/static/img/page.png');
+            background-position: -480px 0;
+        }
+        
+        .peven {
+            background-image: url('/static/img/page.png');
+        }
+        
+        #cv1 {
+            background-image: url('/static/img/cv1.png');
+        }
+        
+        #cv2 {
+            background-image: url('/static/img/cv2.png');
+        }
+        
+        .cat {
+            margin: 5px 0;
+        }
+        
+        .cat:hover {
+            background-color: rgba(102, 172, 230, 0.5);
+            border-radius: 5px;
+        }
+    </style>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/turn.min.js"></script>
+</head>
+
+<body>
+    <!-- class 09 开始 -->
+
+    <div style="width: 200px; margin:0 auto;padding-bottom: 10px;">
+        <button id="first" class="btn btn-info">首页</button>
+        <button id="cata" class="btn btn-primary">目录</button>
+        <button id="last" class="btn btn-info">尾页</button>
+    </div>
+
+    <!-- class 09 结束 -->
+
+
+    <div class="flipbook-viewport">
+        <div class="container">
+            <div class="flipbook">
+                <div class="hard" id="cv1"></div>
+                <div class="hard" id="cv2"></div>
+
+                {% for item in cat %}
+                <div class="page" id="pa">
+                    {% if loop.index % 2==1 %}
+                    <div class="sp podd">
+                        <!-- <h2>目录</h2> -->
+                        {% for i in item %}
+                        <div class="cat" data-page={{i[0]}}>{{i[1]}}-------------------------------{{i[0]}}</div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="sp peven">
+                        <!-- <h2>目录</h2> -->
+                        {% for i in item %}
+                        <div class="cat" data-page={{i[0]}}>{{i[1]}}-------------------------------{{i[0]}}</div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %} {% for i in cities %}
+                <div class="page">
+                    {% if i[0] % 2 == 1 %}
+                    <div class="sp podd">
+                        <p>{{ i[1] }}</p>
+                        <p>{{ i[4] }}</p>
+                    </div>
+                    {% else %}
+                    <div class="sp peven">
+                        <p>{{ i[1] }}</p>
+                        <p>{{ i[4] }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.flipbook').turn({
+            width: 960,
+            height: 550,
+            autoCenter: true
+        });
+
+
+        // class 9开始
+        $(".flipbook").on("click", ".cat", function(e) {
+            jump(e)
+        });
+
+        function jump(e) {
+            var page = $(e.target).data("page") + 22;
+            $(".flipbook").turn("page", page);
+        }
+
+        // $(".cat").click(jump)
+
+        $("#first").click(function() {
+            $(".flipbook").turn("page", 1);
+        });
+
+        $("#cata").click(function() {
+            $(".flipbook").turn("page", 3);
+            $(".cat").click(jump);
+        });
+
+        $("#last").click(function() {
+            $(".flipbook").turn("page", 353);
+        });
+        // class 9结束
+    </script>
+</body>
+
+</html>

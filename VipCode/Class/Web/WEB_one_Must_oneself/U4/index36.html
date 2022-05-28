@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="image/qqZoneIcon.png">
+    <link rel="stylesheet" type="text/css" href="css/emojionearea.min.css">
+
+<!-- class 9 开始 ----------------------------------------------------------->
+    <link rel="stylesheet" href="css/lightgallery.css" />
+    <link rel="stylesheet" href="css/lg-transitions.css" />
+    <link rel="stylesheet" href="css/mygallery.css" />
+<!-- class 9 结束 ----------------------------------------------------------->
+
+    <title>hello，欢迎来到我的空间</title>
+    <style>
+        body {
+            background-image: url(image/space_bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: rgb(235, 234, 234);
+        }
+        
+        .info {
+            width: 75%;
+            margin: 2% auto;
+        }
+        
+        .info h3 {
+            margin: 30px 0;
+        }
+        
+        .portrait {
+            float: left;
+            margin-right: 5%;
+        }
+        
+        .yellow {
+            position: relative;
+            float: left;
+        }
+        
+        .sparkle {
+            animation: progress 0.5s infinite;
+            position: absolute;
+            left: 18px;
+        }
+        
+        @keyframes progress {
+            0% {
+                transform: scale(2);
+            }
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+        
+        .diamond {
+            width: 50px;
+            margin-right: 10px;
+        }
+        
+        .grade {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            font-size: 30px;
+            color: rgb(162, 163, 163);
+        }
+        
+        .grou_up {
+            float: left;
+        }
+        
+        .bar {
+            width: 200px;
+            height: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        
+        .color {
+            width: 0%;
+            height: 10px;
+            background-color: rgb(6, 209, 245);
+            border-radius: 5px;
+        }
+        
+        .button {
+            float: left;
+            background-color: rgb(255, 208, 0);
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 15px;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .like {
+            width: 80px;
+            line-height: 40px;
+            float: right;
+            background-color: rgb(153, 153, 153);
+            border-radius: 30px;
+            text-align: center;
+        }
+        
+        .like a {
+            text-decoration: none;
+        }
+        
+        .like a img {
+            margin-right: 3%;
+            padding-bottom: 7px;
+        }
+        
+        .number {
+            font-size: 20px;
+            color: white;
+        }
+        
+        .vc_tab {
+            width: 75%;
+            margin: 2% auto;
+        }
+        
+        .vc_tab li a {
+            font-size: 18px;
+            color: rgb(34, 34, 34);
+            margin-top: 2%;
+        }
+        
+        .middle_left img {
+            width: 100%;
+        }
+        
+        .wall {
+            line-height: 45px;
+            background: white;
+            text-align: center;
+            border: 2px solid rgb(238, 237, 237);
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        
+        .template {
+            width: 100%;
+        }
+        
+        .template_li {
+            text-align: center;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+        
+        .tab_one {
+            width: 100%;
+        }
+        
+        .tab_two {
+            width: 48%;
+        }
+        
+        .tab_three {
+            float: left;
+            width: 48%;
+        }
+        
+        .tab_fly img {
+            width: 48%;
+            margin-top: 10px;
+        }
+        
+        .my_post {
+            margin-top: 3%;
+        }
+        
+        .post_content {
+            width: 80%;
+            height: 80px;
+            float: left;
+            resize: none;
+        }
+        
+        .post_icons {
+            width: 20%;
+            height: 80px;
+            background-color: rgb(230, 227, 227);
+            float: left;
+            position: relative;
+        }
+        
+        #file_id {
+            display: none;
+        }
+        
+        #file_show {
+            background-color: white;
+            border: 1px solid rgb(211, 211, 211);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 20px;
+            padding: 20px;
+            margin-top: 1%;
+        }
+        
+        #close {
+            width: 3%;
+            margin-left: 80%;
+        }
+        
+        #img_file {
+            width: 40%;
+            margin: 2% auto;
+        }
+        
+        .post_icons img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .my_post_line2 {
+            border-radius: 5px;
+            background: linear-gradient(90deg, rgb(235, 154, 65), rgb(255, 255, 255));
+        }
+        
+        .my_post_line2 button {
+            font-size: 0.8rem;
+            width: 90px;
+            margin-left: 85%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .dynamic {
+            width: 100%;
+            background: white;
+            border: 1px solid rgb(146, 212, 253);
+            margin: 2% 0%;
+            padding: 1%;
+        }
+        
+        .headerimg {
+            float: left;
+            margin: 3%;
+        }
+        
+        .nickname {
+            margin: 3%;
+            font-size: 20px;
+        }
+        
+        .nickname span {
+            font-size: 15px;
+            color: rgb(122, 122, 122);
+        }
+        
+        .dynamic_text {
+            font-size: 1.1rem;
+            clear: both;
+            margin: 3%;
+        }
+        
+        .dynamic_img {
+            margin: 3%;
+        }
+        
+        .input_write {
+            width: 88%;
+            height: 50px;
+            border: 1% solid rgb(250, 196, 46);
+            margin-bottom: 2%;
+        }
+        
+        .comment {
+            margin-top: 2%;
+            margin-left: 5%;
+            font-size: 15px;
+        }
+        
+        .comment_img1 {
+            margin-left: 45%;
+        }
+        
+        .comment_img2 {
+            margin-left: 7%;
+        }
+        
+        .comment_img3 {
+            margin-left: 7%;
+        }
+        
+        .comment img {
+            width: 5%;
+        }
+        
+        .footer img {
+            width: 100%;
+        }
+        
+        .mylogo {
+            margin-left: 8%;
+        }
+        
+        #diary {
+            background-color: darkslategrey;
+            padding: 5% 20%;
+        }
+        
+        #diary img {
+            width: 10%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <nav class="vipnav navbar-dark bg-dark">
+            <a class="mylogo" href="#"><img src="image/qqzone.png"></a>
+            <button class="vc_button" data-target="#vc_id"></button>
+            <div class="vc_hide" id="vc_id">
+                <ul class="vc_list">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">个人中心</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">我的主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">好友</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="vc_id1">
+                            装扮
+                        </a>
+                        <div class="dropdown-menu" aria-label="vc_id1">
+                            <a class="dropdown-item" href="#" id="theme_1">主题1</a>
+                            <a class="dropdown-item" href="#" id="theme_2">主题2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" id="theme_3">主题3</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <h3>高大头的个人空间</h3>
+            <img src="image/b_head3.png" alt="头像" class="portrait">
+            <h4>高大头</h4>
+            <div class="yellow">
+                <img src="image/light.png" alt="" class="sparkle" />
+                <img src="image/drill.png" alt="" class="diamond">
+                <span class="grade">Lv1</span>
+            </div>
+            <div class="grou_up">
+                <span>成长值1 成长速度-10点/点击</span>
+                <div class="bar">
+                    <div class="color">0%</div>
+                </div>
+            </div>
+            <button class="button">续费黄钻</button>
+            <div class="like">
+                <a href="#">
+                    <img src="image/like2.png" alt="">
+                </a>
+                <span class="number" id="number">0</span>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+        <ul class="vc_tab">
+            <li class="nav-item">
+                <a class="vclink active" href="#home">主页</a>
+            </li>
+            <li class="nav-item">
+                <a class="vclink" href="#diary">日志</a>
+            </li>
+            <li class="nav-item">
+                <a class="vclink" href="#photo">图片</a>
+            </li>
+            <li class="nav-item">
+                <a class="vclink" href="#other">其它</a>
+            </li>
+        </ul>
+    </div>
+    <div class="vc_content">
+        <div class="vc_pane show active" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 middle_left">
+                        <img src="image/middle_left.png" alt="中部左">
+                    </div>
+                    <div class="col-sm-8 middle_right">
+                        <div class="wall">
+                            <a data-toggle="collapse" href="#image_wall">
+                                设置形象墙
+                            </a>
+                        </div>
+                        <div class="card card-body collapse" id="image_wall">
+                            <ul class="vc_tab template">
+                                <li class="template_li">选择模板</li>
+                                <li class="nav-item">
+                                    <a class="vclink active" href="#one"><img src="image/number1.png" id="num1"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="vclink" href="#two"><img src="image/number2.png" id="num2"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="vclink" href="#three"><img src="image/number3.png" id="num3"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="vclink" href="#fore"><img src="image/number4.png" id="num4"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="vclink" href="#five"><img src="image/number5.png" id="num5"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="vclink" href="#six"><img src="image/number6.png" id="num6"></a>
+                                </li>
+                            </ul>
+                            <div class="vc_content mycontent"></div>
+                        </div>
+                        <div class="my_post" id="my_post">
+                            <div style="height: 80px;">
+                                <textarea id="post_content" class="post_content" data-toggle="collapse" data-target="#vc_post"></textarea>
+                                <div class="post_icons">
+                                    <input type="file" id="file_id">
+                                    <label for="file_id">
+                                        <img src="image/icon_camera.png" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="collapse my_post_line2" id="vc_post">
+                                <button class="btn btn-info" id="btn_post">发表</button>
+                            </div>
+                            <div id="file_show">
+                                图片预览：<img src="image/X.png" alt="" id="close">
+                                <br>
+                                <img src="" alt="" id="img_file">
+                            </div>
+                        </div>
+                        <div class="dynamic">
+                            <img class="headerimg" src="image/b_head3.png">
+                            <div class="nickname">
+                                高大头<br>
+                                <span>14:30</span>
+                            </div>
+                            <div class="dynamic_text">
+                                茶杯犬因其体型娇小而得名，也称茶杯贵宾犬，是一种起源于美国的宠物犬， 茶杯犬的寿命通常是有10岁以内，如果照顾的好更长的寿命也是有可能的。
+                            </div>
+                            <div class="dynamic_img">
+                                <img src="image/dog.png" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_pane" id="diary">
+            <h1 style="text-align:center">我的日志</h1>
+            <img class="rounded float-left" src="image/cat2.png" alt="">
+            <p>猫在高兴时，尾巴会竖起来，或者发出呼噜呼噜的声音。猫生气的时候，会使劲地摇尾巴。如果你惹它生气了，它有可能会猛地扑向你。猫经常清理自己的毛。小猫在很多时候，爱舔身子，自我清洁。饭后猫会用前爪擦擦胡子，被人抱后用舌头舔舔毛。这是猫的本能，去除自己身上的异味以躲避捕食者的追踪。猫的舌头上有许多粗糙的小突起，这是除去脏污最合适不过的工具。
+            </p>
+            <div style="clear:both"></div>
+            <img class="rounded-circle mx-auto d-block" src="image/cat1.png" alt="">
+            <img class="img-thumbnail float-right" src="image/cat3.png" alt="">
+            <p>猫在高兴时，尾巴会竖起来，或者发出呼噜呼噜的声音。猫生气的时候，会使劲地摇尾巴。如果你惹它生气了，它有可能会猛地扑向你。猫经常清理自己的毛。小猫在很多时候，爱舔身子，自我清洁。饭后猫会用前爪擦擦胡子，被人抱后用舌头舔舔毛。这是猫的本能，去除自己身上的异味以躲避捕食者的追踪。猫的舌头上有许多粗糙的小突起，这是除去脏污最合适不过的工具。
+            </p>
+            <div style="clear:both"></div>
+        </div>
+        <div class="vc_pane" id="photo">
+<!-- class 9 开始----------------------------------------------------------------------->
+            <audio id="audio" src="music/学猫叫.mp3"></audio>
+            <ul id="lightgallery" class="list-unstyled row">
+                <li class="col-md-4" data-src="image/1.jpg" data-sub-html="<h4>富士山</h4><p>富士山，是一座跨越在日本静冈县（富士宫市、裾野市、富士市、御殿场市、骏东郡小山町）与山梨县（富士吉田市、南都留郡鸣沢村）之间的活火山....</p>">
+                    <a href="">
+                        <img src="image/1.jpg" alt="Thumb-1" />
+                    </a>
+                </li>
+                <li class="col-md-4" data-src="image/2.jpg" data-sub-html="<h4>上海</h4><p>上海是中国共产党诞生地、国家历史文化名城，中国经济、金融、贸易、航运、科技创新中心....</p>">
+                    <a href="">
+                        <img src="image/2.jpg" alt="Thumb-2" />
+                    </a>
+                </li>
+                <li class="col-md-4" data-src="image/3.jpg" data-sub-html="<h4>巴黎</h4><p>巴黎（Paris），是法兰西共和国的首都和最大城市，也是法国的政治、经济、文化和商业中心....</p>">
+                    <a href="">
+                        <img src="image/3.jpg" alt="Thumb-3" />
+                    </a>
+                </li>
+                <li class="col-md-4" data-src="image/4.jpg" data-sub-html="<h4>希腊</h4><p>希腊地处欧洲东南角、巴尔干半岛的南端的共和制国家。全国由半岛南部的伯罗.....</p>">
+                    <a href="">
+                        <img src="image/4.jpg" alt="Thumb-4" />
+                    </a>
+                </li>
+                <li class="col-md-4" data-src="image/5.jpg" data-sub-html="<h4>瑞士</h4><p>瑞士北邻德国，西邻法国，南邻意大利，东邻奥地利和列支敦士登。全境以高原和山地为主，有“欧洲屋脊”之称....</p>">
+                    <a href="">
+                        <img src="image/5.jpg" alt="Thumb-5" />
+                    </a>
+                </li>
+                <li class="col-md-4" data-src="image/6.jpg" data-sub-html="<h4>非洲</h4><p>全称阿非利加洲，位于东半球西部，欧洲以南，亚洲之西，东濒印度洋，西临大西洋，纵跨赤道南北....</p>">
+                    <a href="">
+                        <img src="image/6.jpg" alt="Thumb-6" />
+                    </a>
+                </li>
+                <li class="col-md-4" data-src="image/7.jpg" data-sub-html="<h4>北极</h4><p>北极地区的气候终年寒冷。北冰洋是一片浩瀚的冰封海洋，周围是众多的岛屿以及北美洲和亚洲北部的沿海地区。北极是指地球自转轴的北端....</p>">
+                    <a href="">
+                        <img src="image/7.jpg" alt="Thumb-7" />
+                    </a>
+                </li>
+                <li class="col-md-4" data-src="image/8.jpg" data-sub-html="<h4>埃及</h4><p>埃及位于非洲东北部，地处欧亚非三大洲的交通要冲，是大西洋与印度洋之间海上航线的捷径....</p>">
+                    <a href="">
+                        <img src="image/8.jpg" alt="Thumb-8" />
+                    </a>
+                </li>
+                <li class="col-md-4" data-src="image/9.jpg" data-sub-html="<h4>德国</h4><p>位于中欧的联邦议会共和制国家，北邻丹麦，西部与荷兰、比利时、卢森堡和法国接壤，南邻瑞士和奥地利....</p>">
+                    <a href="">
+                        <img src="image/9.jpg" alt="Thumb-9" />
+                    </a>
+                </li>
+            </ul>
+<!-- class 9 结束----------------------------------------------------------------------->
+        </div>
+        <div class="vc_pane" id="other">
+            <h1 style="text-align:center">其它</h1>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="image/footer.png" alt="脚部">
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery.js "></script>
+    <script type="text/javascript" src="js/popper.min.js "></script>
+    <script type="text/javascript" src="js/bootstrap.min.js "></script>
+    <script type="text/javascript" src="js/vc.js"></script>
+    <script type="text/javascript" src="js/page.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/emojionearea.min.js"></script>
+<!-- class 9 开始 ------------------------------------------------------>
+    <script src="js/lightgallery.min.js"></script>
+    <script src="js/lg-thumbnail.min.js"></script>
+<!-- class 9 结束 ------------------------------------------------------>
+    <script>
+        // 点赞部分逻辑
+        $(".like>a").click(show);
+
+        function show() {
+            var num = $(".number").html();
+            num = parseInt(num);
+            num += 1;
+            $(".number").html(num);
+            localStorage.setItem("num", num);
+        }
+
+        if (localStorage.getItem("num") != null) {
+            $(".number").html(localStorage.getItem("num"));
+        }
+
+
+        // 黄钻部分逻辑
+        var pro = 0; //进度条的初始长度
+        var lv = 1 //Lv的初始级数
+
+        // 在本地存储中取值
+        if (localStorage.getItem("progress") != null) {
+            pro = parseInt(localStorage.getItem("progress"));
+        }
+        if (localStorage.getItem("Lv") != null) {
+            lv = parseInt(localStorage.getItem("Lv"));
+        }
+
+        $(".color").width(pro + "%");
+        $(".color").html(pro + "%");
+        $(".grade").html("Lv" + lv);
+
+        // 往本地存储中存值
+        $(".button").click(diamond);
+
+        function diamond() {
+            pro = pro + 10;
+            if (pro == 100) {
+                pro = 0;
+                lv += 1
+            }
+            $(".color").width(pro + "%");
+            $(".color").html(pro + "%");
+            $(".grade").html("Lv" + lv);
+            localStorage.setItem("Lv", lv);
+            localStorage.setItem("progress", pro);
+        };
+
+        // 换肤逻辑
+        $(".dropdown-item").click(skin);
+
+        function skin(event) {
+            var i = event.target.innerText;
+            if (i == "主题1") {
+                $("body").css({
+                    "background": "url(image/space_bg.png)",
+                    "background-size": "100%",
+                    "background-repeat": "no-repeat",
+                    "background-color": "rgb(235, 234, 234)",
+                    "color": "black"
+                });
+            }
+            if (i == "主题2") {
+                $("body").css({
+                    "background": "url(image/star_bg.jpg)",
+                    "color": "white"
+                });
+            }
+        }
+
+
+
+        // 发表动态
+        function post() {
+            var content = $("#post_content").val();
+            var child_item = $(".dynamic:first").clone();
+            child_item.find(".dynamic_text").html(content);
+            child_item.find(".dynamic_img").remove();
+            var src = $("#img_file").attr("src");
+            if (src != "") {
+                child_item.find(".dynamic_text").after(`<div class="dynamic_img"><img src="${src}" class="img-thumbnail"></div>`);
+                closed();
+            }
+            var time = moment().format("YYYY-MM-DD HH:mm:ss");
+            child_item.find("span").html(time);
+            $(".dynamic:first").before(child_item);
+        }
+        $("#btn_post").click(post);
+
+        // 添加表情
+        setEmoji($("#post_content"), "bottom");
+
+
+        // 预览图片
+        $("#file_show").hide();
+
+
+        $('#file_id').change(preview)
+
+        function preview() {
+            var filePath = getPath("file_id");
+            $('#img_file').attr({
+                'src': filePath
+            });
+            $("#file_show").slideDown();
+        }
+
+        // 关闭预览区域
+        $("#close").click(closed)
+
+        function closed() {
+            $('#img_file').attr({
+                'src': ""
+            });
+            $("#file_show").slideUp();
+        }
+// =================================== class 9 开始 ==============================
+        //照片逻辑
+        var options = {
+            mode: "lg-slide-circular",
+        };
+        var lg = document.getElementById("lightgallery");
+
+        function play() {
+            document.getElementById('audio').play();
+        }
+        lg.addEventListener("onAfterOpen", play);
+
+        function pause() {
+            document.getElementById('audio').pause();
+        }
+        lg.addEventListener("onBeforeClose", pause);
+        lightGallery(lg, options);
+// =================================== class 9 结束 ==============================
+    </script>
+</body>
+
+</html>

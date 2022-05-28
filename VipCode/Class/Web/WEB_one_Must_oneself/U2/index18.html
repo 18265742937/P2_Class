@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>遮罩动画</title>
+    <style>
+        body {
+            background: url(image/bg2.png);
+        }
+        
+        .enjoy {
+            text-decoration: none;
+            position: absolute;
+            top: 100px;
+            left: 600px;
+            color: white;
+            font-size: 28px;
+        }
+        
+        .role1,
+        .role2,
+        .role3,
+        .shade1,
+        .shade2,
+        .shade3,
+        .shade4 {
+            width: 200px;
+            height: 305px;
+            position: absolute;
+            top: 200px;
+        }
+        
+        .shade1,
+        .shade2,
+        .shade3,
+        .shade4 {
+            background-color: rgba(176, 176, 184, 0.5);
+            text-align: center;
+            line-height: 305px;
+            transition-duration: 1s;
+        }
+        
+        .role1,
+        .shade1 {
+            left: 25%;
+        }
+        
+        .role2,
+        .shade2 {
+            left: 45%;
+        }
+        
+        .role3,
+        .shade3,
+        .shade4 {
+            left: 65%;
+        }
+        
+        .shade1:hover {
+            transform: scale(0, 1);
+        }
+        
+        .shade2:hover {
+            transform: scale(1, 0);
+        }
+        
+        .shade3:hover {
+            transform: scale(0, 1);
+        }
+        
+        .shade4:hover {
+            transform: scale(1, 0);
+        }
+        
+        .sd:hover .shade3 {
+            transform: scale(0, 1);
+        }
+        
+        .sd:hover .shade4 {
+            transform: scale(1, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.51h5.com/game/2635.html" class="enjoy">体验游戏</a>
+    <img src="image/intro1.png" alt="" class="role1">
+    <div class="shade1">5000$</div>
+    <img src="image/intro2.png" alt="" class="role2">
+    <div class="shade2">300$</div>
+    <div class="sd">
+        <img src="image/intro3.png" alt="" class="role3">
+        <div class="shade3"></div>
+        <div class="shade4">500$</div>
+    </div>
+</body>
+
+</html>

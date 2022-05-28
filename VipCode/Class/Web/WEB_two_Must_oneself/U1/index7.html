@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>词云图</title>
+</head>
+
+<body>
+    <!-- 词云样式 -------------------->
+    <div class="chart" id="cloud" style="width:600px; height:400px;"></div>
+    <div class="chart" id="city" style="width:600px; height:400px;"></div>
+
+    <!-- 连接js文件 ------------------>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts-wordcloud.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        //样例数据
+        var dataSet = [{
+            name: "麦当劳",
+            value: 50
+        }, {
+            name: "肯德基",
+            value: 30
+        }, {
+            name: "必胜客",
+            value: 40
+        }, {
+            name: "火锅",
+            value: 45
+        }, {
+            name: "冰激凌",
+            value: 25
+        }, {
+            name: "水果",
+            value: 30
+        }]
+
+        //根据数据绘制词云图(将样式与数据结合)
+        Chart.createWordCold("cloud", dataSet);
+        
+        $.get('data/ChinaList.json', function(city) {
+            Chart.createWordCold("city", city);
+        })
+    </script>
+<!-- =====class 01结束============================================================================= -->
+</body>
+
+</html>

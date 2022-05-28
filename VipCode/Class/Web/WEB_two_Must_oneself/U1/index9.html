@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>词云图</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>1. 谁是唐诗之王？</h2>
+        <div class="chart" id="cloud" style="width: 600px;height:400px;"></div>
+<!-- ===开始==================================================== -->
+        <h2>2. 唐诗界劳模 Top 10 都有谁？</h2>
+        <div id="bar" style="width: 100%;height:400px;"></div>
+        <div id="pie" style="width: 100%;height:400px;"></div>
+<!-- ====结束=================================================== -->
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts-wordcloud.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        // 获取数据，处理数据
+        $.get('data/poets.json', function(poets) { //获取诗人
+            var poetsNameMap = new Map(); //诗人的名字
+            var poetsNumMap = new Map(); //诗人对应作的是的数量
+            poets.data.forEach(function(el) {
+                poetsNameMap.set(el.poet_id, el.name);
+                poetsNumMap.set(el.poet_id, 0);
+            });
+            $.get('data/poetry.json', function(poems) {
+                poems.data.forEach(function(el) {
+                    var num = poetsNumMap.get(el.poet_id) + 1;
+                    poetsNumMap.set(el.poet_id, num);
+                });
+                var dataSet = [];
+                poetsNumMap.forEach(function(val, key) {
+                    var temp = {
+                        name: poetsNameMap.get(key),
+                        value: val,
+                    };
+                    dataSet.push(temp)
+                });
+
+                // 画云图
+                var options = {
+                    imgName: 'RABBIT',
+                    size: "small",
+                };
+                Chart.createWordCold("cloud", dataSet, options);
+
+// ====开始=================================================================
+                // 画柱形图
+                dataSet.sort(function(a,  b) {
+                    if (a.value < b.value) {             
+                        return  1;            
+                    } 
+                    else if (a.value > b.value) {             
+                        return  -1;            
+                    } else {
+                        return 0;
+                    }   
+                });
+
+                // console.log(dataSet)
+                var barData = dataSet.slice(0, 10);
+
+                var barOption = {
+                    title: '劳模排行榜 Top 10',
+                    color: 'rgb(76,152,220)',
+                    seriesLabel: '写诗数量',
+                };
+                Chart.createBar('bar', barData, barOption);
+
+
+                // 画TOP10写诗占比图(饼图)
+                var sum = 0;
+                dataSet.forEach(function(el, i) {
+                    if (i > 10) {
+                        sum = sum + el.value
+                    }
+                })
+                barData.push({
+                    name: "其他",
+                    value: sum,
+                })
+                console.log(barData)
+                var pieOption = {
+                    title: 'TOP 10 在唐代写诗占比',
+                };
+                Chart.createPie('pie', barData, pieOption);
+// ======结束===================================================================
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

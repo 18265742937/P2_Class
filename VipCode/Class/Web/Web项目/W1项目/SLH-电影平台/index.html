@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLH-电影网</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(158, 210, 214);
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .vipnav img {
+            width: 50px;
+        }
+        
+        .vipnav {
+            opacity: 0.5;
+        }
+        
+        .img_list img {
+            width: 150px;
+            margin-left: 3px;
+        }
+        
+        .dy_show {
+            padding: 0 2%;
+            border-bottom: 2px solid rgb(31, 30, 30);
+        }
+        
+        .dy_show h3 {
+            margin: 2% 0;
+        }
+        
+        .img_list img:hover {
+            transform: translate(0px, -10px);
+        }
+        
+        .cont {
+            width: 100%;
+            float: left;
+            border: 1px solid rgb(68, 68, 68);
+            margin-bottom: 5%;
+        }
+        
+        .cont span {
+            font-size: 18px;
+            color: rgb(63, 63, 63);
+            margin-left: 2%;
+        }
+        
+        .cont p {
+            font-size: 22px;
+            color: rgb(77, 77, 77);
+            margin-left: 2%;
+        }
+        
+        .content h3 {
+            margin: 2%;
+        }
+        
+        .cont img {
+            transition: all 3s;
+        }
+        
+        .cont:hover img {
+            transform: scale(1.2);
+        }
+        
+        .cont-img {
+            overflow: hidden;
+            border: 2px solid rgba(0, 0, 0, 0);
+            margin-bottom: 2%;
+        }
+        
+        .cont:hover .cont-img {
+            border: 2px solid blue;
+        }
+        
+        .pic {
+            width: 100%;
+        }
+        
+        .pic img {
+            position: absolute;
+        }
+        
+        .footer {
+            width: 100%;
+            height: 280px;
+            text-align: center;
+            background-color: darksalmon;
+            padding-top: 100px;
+            font-size: 20px;
+            color: white;
+        }
+        
+        #slide {
+            overflow: hidden;
+        }
+        
+        .images {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .image {
+            width: 1500px;
+            height: 400px;
+            animation: translate 20s infinite alternate;
+        }
+        
+        #slide-1 {
+            background-image: url(img/dy_silde1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        #slide-2 {
+            background-image: url(img/dy_silde2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        #slide-3 {
+            background-image: url(img/dy_silde3.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        @keyframes translate {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-100px, 0);
+            }
+        }
+        
+        .slide-text {
+            width: 100%;
+            background-color: rgba(156, 155, 155, 0.455);
+            position: absolute;
+            top: 300px;
+            text-align: center;
+        }
+        
+        .slide-text h1 {
+            color: white;
+        }
+        
+        .slide-text p {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .top {
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+            background: rgb(200, 200, 200, 0.5);
+            opacity: 0.5;
+            padding-top: 10px;
+        }
+        /* 鼠标悬浮不透明 */
+        
+        .top:hover {
+            opacity: 1;
+        }
+        
+        .container {
+            max-width: 1340px;
+        }
+    </style>
+</head>
+A、
+<!-- 科幻知识科普系统 -->
+B、
+<!-- FZZ-星空project系统 -->
+C、
+<!-- science.fiction -->
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="vipnav">
+        <a href="index.html"><img src="img/logo.jpg" alt=""></a>
+        <button class="vc_button" data-target="#vc_id">
+        </button>
+        <div class="vc_hide" id="vc_id">
+            <ul class="vipul">
+                <li><a class="nav-link" href="#slide">滚动轮播区</a></li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="">电影合集</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="info1.html">《复仇者联盟1》</a>
+                        <a class="dropdown-item" href="info2.html">《复仇者联盟2》</a>
+                        <a class="dropdown-item" href="info3.html">《黑豹》</a>
+                        <a class="dropdown-item" href="info4.html">《惊奇队长》</a>
+                        <a class="dropdown-item" href="info5.html">《雷神3》</a>
+                        <a class="dropdown-item" href="info6.html">《奇异博士》</a>
+                        <a class="dropdown-item" href="info7.html">《死侍》</a>
+                        <a class="dropdown-item" href="info8.html">《蜘蛛侠》</a>
+                    </div>
+                </li>
+                <li><a class="nav-link" href="#link2">热播电影</a></li>
+                <li><a class="nav-link" href="#link3">渐变轮播区</a></li>
+                <li><a class="nav-link" href="#link4">认证信息</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 滚动轮播区域 -->
+    <div id="slide">
+        <div class="images">
+            <div class="image" id="slide-1">
+                <div class="slide-text">
+                    <h1>《速度与激情》</h1>
+                    <p>绝不放慢速度，宁愿粉身碎骨</p>
+                </div>
+            </div>
+        </div>
+        <div class="images">
+            <div class="image" id="slide-2">
+                <div class="slide-text">
+                    <h1>《德鲁大叔》</h1>
+                    <p>不尝试就不会成功,只要心不老,就永远不会老</p>
+                </div>
+            </div>
+        </div>
+        <div class="images">
+            <div class="image" id="slide-3">
+                <div class="slide-text">
+                    <h1>《肖申克的救赎》</h1>
+                    <p>人生可以归结为一种简单的选择：不是忙着活，就是忙着死。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 展示区 -->
+    <div class="dy_show" id="link1">
+        <h3>电影合集</h3>
+        <div class="img_list">
+            <a href="info1.html"><img src="img/dy_show1.jpg" alt=""></a>
+            <a href="info2.html"><img src="img/dy_show2.jpg" alt=""></a>
+            <a href="info3.html"><img src="img/dy_show3.jpg" alt=""></a>
+            <a href="info4.html"><img src="img/dy_show4.jpg" alt=""></a>
+            <a href="info5.html"><img src="img/dy_show5.jpg" alt=""></a>
+            <a href="info6.html"><img src="img/dy_show6.jpg" alt=""></a>
+            <a href="info7.html"><img src="img/dy_show7.jpg" alt=""></a>
+            <a href="info8.html"><img src="img/dy_show8.jpg" alt=""></a>
+
+        </div>
+    </div>
+    <!-- 内容区 -->
+    <div class="content" id="link2">
+        <h3>热播电影</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="new1.html">
+                        <div class="cont">
+                            <div class="cont-img">
+                                <img src="img/dy__content1.jpg" alt="">
+                            </div>
+                            <span>电影</span>
+                            <p>解读电影《1917》</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <a href="new2.html">
+                        <div class="cont">
+                            <div class="cont-img">
+                                <img src="img/dy_content2.jpg" alt="">
+                            </div>
+                            <span>电影</span>
+                            <p>钢琴家 The Pianist (2002) 电影推荐</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <a href="new3.html">
+                        <div class="cont">
+                            <div class="cont-img">
+                                <img src="img/dy_content3.jpg" alt="">
+                            </div>
+                            <span>电影</span>
+                            <p>《绿皮书》：18个小细节之下的全新解读</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 渐变轮播 -->
+    <div style="clear: both;"></div>
+    <div class="pic" id="link3">
+        <a href="https://baike.baidu.com/item/%E6%88%98%E7%8B%BC%E2%85%A1/20794668?fr=aladdin">
+            <img src="img/dy_pic1.png" alt="">
+        </a>
+        <a href="https://baike.baidu.com/item/%E8%9C%98%E8%9B%9B%E4%BE%A0%EF%BC%9A%E8%8B%B1%E9%9B%84%E8%BF%9C%E5%BE%81/22944950?fr=aladdin">
+            <img src="img/dy_pic2.png" alt="">
+        </a>
+        <a href="https://baike.baidu.com/item/%E6%88%91%E4%B8%8D%E6%98%AF%E8%8D%AF%E7%A5%9E/22485219?fr=aladdin">
+            <img src="img/dy_pic3.jpg" alt="">
+        </a>
+    </div>
+    <!-- footer -->
+    <div class="footer" id="link4">
+        孙鸣显|刘卓元|何首乌
+        <br>
+        <br> @2020年9月7号制作
+    </div>
+    <div class="top">
+        <a href="#">
+            <img src="image/comeback.png" alt="">
+        </a>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/jsAnimate.js"></script>
+    <script type="text/javascript" src="js/vc.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+﻿//  里面的代码老师看学生的操作情况酌情给学生提供
+
+class2
+
+导航栏的重复代码：
+<li class="nav-item">
+	<a class="nav-link" href="#">我的主页</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link" href="#">好友</a>
+</li>
+
+
+下拉菜单的重复代码：
+<a class="dropdown-item" href="#">主题2</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="#">主题3</a>
+
+
+class3
+
+简单的样式代码：
+.info {
+            width: 75%;
+            margin: 0 auto;
+        }
+        
+.info h3 {
+            margin: 30px 0;
+	}
+.diamond {
+            width: 370px;
+        }
+		
+class5
+
+BlingBling动画的样式代码：
+.light {
+            animation: flash 0.5s infinite;
+            position: absolute;
+            left: 18px;
+        }
+        
+@keyframes flash {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+class6
+
+设置按钮的样式：
+background-color: rgb(255, 208, 0);
+border: 1px solid black;
+border-radius: 5px;
+padding: 5px 15px;
+font-size: 14px;
+

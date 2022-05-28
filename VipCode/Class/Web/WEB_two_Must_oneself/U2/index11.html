@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>旭日图</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>宋词界最火的词牌名都有哪些？</h2>
+        <div id="sunburst" style="width: 100%;height:400px;"></div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts-wordcloud.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        // 宋代词牌
+        $.get('data/ci.json', function(cipai) {
+            // 只取前10个词牌
+            var data = cipai.slice(0, 10);
+            var sunburstData = [];
+            data.forEach(function(el) {       
+                var temp = {
+                    name: el.name,
+                    children: el.children.slice(0, 5),
+                }
+                console.log(temp)
+                sunburstData.push(temp);
+            });
+            Chart.createSunburst('sunburst', sunburstData);
+        });
+    </script>
+</body>
+
+</html>

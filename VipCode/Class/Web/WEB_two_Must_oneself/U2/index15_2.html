@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>雷达图 平行坐标图</title>
+</head>
+
+<body>
+    <div class="float" id="radar" style="width: 600px; height: 400px;"></div>
+    <div class="float" id="p1" style="width: 600px;height:400px;"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        //以夏侯惇为例的雷达图
+        var radarData = [{
+            name: "夏侯惇",
+            value: [7350, 1746, 321, 397, 98, 37]
+        }]
+        var Maxvalue = [{
+            name: "最大生命",
+            max: 9328
+        }, {
+            name: "最大法力",
+            max: 2016
+        }, {
+            name: "最大物攻",
+            max: 427
+        }, {
+            name: "最大物防",
+            max: 514
+        }, {
+            name: "最大每5秒回血",
+            max: 128
+        }, {
+            name: "最大每5秒回蓝",
+            max: 50
+        }]
+
+        Chart.createRadar('radar', radarData, {
+            indicator: Maxvalue,
+        });
+
+// 开始---------------------------------------------------------------------------------------------
+        //以夏侯惇为例的平行图
+        var attribute = ['英雄', '初始生命', '最大生命', '初始法力', '最大法力', '初始物攻', '最高物攻', '初始物防', '最大物防']
+        var attributevalue = [
+            ['夏侯惇', 3307, 7350, 430, 1746, 159, 321, 101, 397],
+            ['钟无艳', 3150, 7000, 430, 1760, 164, 318, 100, 309]
+        ]
+        var parallelAxi = {
+            legendName: '英雄',
+            label: attribute,
+            value: attributevalue,
+        }
+        Chart.createParallel("p1", parallelAxi);
+// 结束---------------------------------------------------------------------------------------------
+
+    </script>
+</body>
+
+</html>
+
+<!-- var test1 = ['日期','语文','数学','英语','编程','音乐']
+
+['10日',2, 1,5,2,0]
+..... -->

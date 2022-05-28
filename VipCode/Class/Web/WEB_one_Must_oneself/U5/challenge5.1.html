@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>新春十二响</h1>
+    <div></div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+        var arr = [10, 9, 8, 7, 5, 4, 3, 3, 2, 1];
+
+        var count_down = setInterval(count, 1000)
+
+        function count() {
+            if (arr.length > 0) {
+                $("div").html("页面倒计时：" + arr.shift());
+            } else {
+                $("h1").remove()
+                $("div").html("")
+                $("div").append("<img src='image/Fireworks.gif'>");
+                clearInterval(count_down)
+            }
+
+        }
+        count()
+    </script>
+</body>
+
+</html>

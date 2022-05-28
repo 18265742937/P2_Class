@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="42ae239b-dbd2-47e5-bff1-9ba06891c957" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eFtmd7EFTRdivy05srxC5mIZiL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="植物大战僵尸" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42ae239b-dbd2-47e5-bff1-9ba06891c957" name="默认更改列表" comment="" />
+      <created>1593929329201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593929329201</updated>
+      <workItem from="1593929331544" duration="23000" />
+      <workItem from="1593929873926" duration="6082000" />
+      <workItem from="1593953512056" duration="827000" />
+      <workItem from="1593955128023" duration="90000" />
+      <workItem from="1593955497187" duration="7991000" />
+      <workItem from="1593999188488" duration="20010000" />
+      <workItem from="1594030588578" duration="12762000" />
+      <workItem from="1594080473847" duration="13154000" />
+      <workItem from="1594097701409" duration="11979000" />
+      <workItem from="1594126648402" duration="10705000" />
+      <workItem from="1594174129924" duration="33002000" />
+      <workItem from="1594222727877" duration="1072000" />
+      <workItem from="1594255636044" duration="10352000" />
+      <workItem from="1594273218635" duration="1186000" />
+      <workItem from="1594296619385" duration="6057000" />
+      <workItem from="1594308523219" duration="3377000" />
+      <workItem from="1594344816499" duration="5544000" />
+      <workItem from="1594372485047" duration="16398000" />
+      <workItem from="1594445676949" duration="17539000" />
+      <workItem from="1594515509458" duration="5972000" />
+      <workItem from="1594525876487" duration="440000" />
+      <workItem from="1594526587164" duration="415000" />
+      <workItem from="1594710352676" duration="109000" />
+      <workItem from="1594879371123" duration="390000" />
+      <workItem from="1594879837433" duration="110000" />
+      <workItem from="1595070362786" duration="13290000" />
+      <workItem from="1595121152035" duration="58000" />
+      <workItem from="1595126937971" duration="6853000" />
+      <workItem from="1595139498025" duration="288000" />
+      <workItem from="1595139872082" duration="123000" />
+      <workItem from="1595141160843" duration="43000" />
+      <workItem from="1595142334222" duration="112000" />
+      <workItem from="1595142481421" duration="1627000" />
+      <workItem from="1595146204276" duration="16000" />
+      <workItem from="1595148308723" duration="125000" />
+      <workItem from="1595148942151" duration="6811000" />
+      <workItem from="1595246810457" duration="4205000" />
+      <workItem from="1595259768251" duration="600000" />
+      <workItem from="1595300921361" duration="9945000" />
+      <workItem from="1595330553968" duration="11267000" />
+      <workItem from="1595397883674" duration="14302000" />
+      <workItem from="1595416973637" duration="10185000" />
+      <workItem from="1595466669732" duration="4297000" />
+      <workItem from="1595473046875" duration="129000" />
+      <workItem from="1595473240616" duration="3585000" />
+      <workItem from="1595482329882" duration="2075000" />
+      <workItem from="1595487098389" duration="1305000" />
+      <workItem from="1595488464185" duration="1439000" />
+      <workItem from="1595491090227" duration="319000" />
+      <workItem from="1595503968625" duration="5242000" />
+      <workItem from="1595560771557" duration="111000" />
+      <workItem from="1595560940019" duration="276000" />
+      <workItem from="1595569664477" duration="485000" />
+      <workItem from="1595576408087" duration="234000" />
+      <workItem from="1595597256747" duration="135000" />
+      <workItem from="1595640727831" duration="51000" />
+      <workItem from="1595646138214" duration="1099000" />
+      <workItem from="1599055898236" duration="459000" />
+      <workItem from="1600610383349" duration="60000" />
+      <workItem from="1604399057751" duration="134000" />
+      <workItem from="1605765155598" duration="60000" />
+      <workItem from="1615735343408" duration="277000" />
+      <workItem from="1625210950419" duration="168000" />
+      <workItem from="1626863794040" duration="132000" />
+      <workItem from="1626864112351" duration="223000" />
+      <workItem from="1626864502986" duration="424000" />
+      <workItem from="1626864986589" duration="200000" />
+      <workItem from="1626865217245" duration="36000" />
+      <workItem from="1626869588178" duration="277000" />
+      <workItem from="1626869963782" duration="39000" />
+      <workItem from="1626965725746" duration="45000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1626965770457">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626965770457" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1626965770457">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626965770457" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1626965770457">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626965770457" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1626965770457">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626965770457" />
+    <state x="491" y="330" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1626865181896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="491" y="330" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.824@0.0.1536.824" timestamp="1626865181896" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/$main.coverage" NAME="main Coverage Results" MODIFIED="1626965760998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

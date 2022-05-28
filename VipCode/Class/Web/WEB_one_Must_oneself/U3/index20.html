@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="image/qqZoneIcon.png">
+    <title>hello,我的空间</title>
+    <style>
+        body {
+            background-color: rgb(235, 234, 234);
+            background-image: url(../代码/img/space_bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .mylogo {
+            margin-left: 8%;
+        }
+        
+        .header,
+        .header img,
+        .footer,
+        .footer img {
+            width: 100%;
+        }
+        
+        .middle_left img {
+            margin-left: 8%;
+            width: 80%;
+        }
+        
+        .middle_right img {
+            margin-left: 5%;
+            width: 80%
+        }
+        
+        
+    </style>
+
+    <script type="text/javascript" src="js/jquery.js "></script>
+    <script type="text/javascript" src="js/popper.min.js "></script>
+    <script type="text/javascript" src="js/bootstrap.min.js "></script>
+    <script type="text/javascript" src="js/vc.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <nav class="vipnav navbar-dark bg-dark">
+            <a class="mylogo" href="#"><img src="image/qqzone.png"></a>
+            <button class="vc_button" data-target="#vc_id"></button>
+            <div class="vc_hide" id="vc_id">
+                <ul class="vc_list">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">个人中心</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">我的主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">好友</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="vc_id1">装扮</a>
+                        <div class="dropdown-menu" aria-label="vc_id1">
+                            <a class="dropdown-item" href="#">主题1</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">主题2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">主题3</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <img src="image/header2.png" alt="头部">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 middle_left">
+                <img src="image/middle_left.png" alt="中部左">
+            </div>
+            <div class="col-sm-8 middle_right">
+                <img src="image/middle_right.png" alt="中部右">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="image/footer.png" alt="底部">
+    </div>
+
+
+</body>
+
+</html>  

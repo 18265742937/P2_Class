@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas width="800" height="500" id="cvs"></canvas>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script>   
+
+        var cvs = document.getElementById("cvs");
+        var ctx = cvs.getContext("2d");
+        var data = [[1, 50], [2, 10], [3, 100], [4, 20], [5, 300], [6,50], [7, 30]];
+
+        var margin = 60;
+        var u = Util(cvs, ctx, margin);
+
+        var dataText = [];
+        var dataValue = [];
+        data.forEach(function(el, i) {
+            var text = el[0] + "月";
+            dataText.push(text);
+            dataValue.push(el[1]);
+        });
+        u.font(12, "宋体");
+        var xs = u.vcDrawX(dataText);
+        var hs = u.vcDrawY(dataValue, 10);
+
+        u.fillColor("rgb(58, 161,255)"); // 设置颜色
+        data.forEach(function(el, i) {
+            var x = xs[i] - 30;
+            var y = u.oy - hs[i];
+            u.rect(x, y, 60, hs[i]); 
+/************************** class 4 开始 *********************************************************/
+            u.textAlign("center");
+            u.text(xs[i], y - 10, el[1]); 
+/************************** class 4 结束 *********************************************************/
+        });
+
+/************************** class 4 开始 *********************************************************/
+        xs.forEach(function(num, i) {
+            var x1 = num;
+            var y1 = u.oy - hs[i]/2; 
+            var x2 = xs[i+1];
+            var y2 = u.oy - hs[i+1]/2;
+            u.lineStyle(2, "red");
+            u.line(x1, y1, x2, y2);
+            // u.fillColor("red");
+            // u.circle(5, x1, y1);
+        });     
+
+        u.font(18, "宋体");
+        u.text(400, 30, "每月零花钱数(元)");
+
+/************************** class 4 结束 *********************************************************/
+    </script>
+</body>
+</html>
+

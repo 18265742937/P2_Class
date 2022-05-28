@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/wickedcss.css">
+    <link rel="icon" href="image/icon.png">
+    <title>星际战甲</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .vipnav {
+            opacity: 0.8;
+        }
+        
+        #slide {
+            height: 500px;
+        }
+        
+        .masked {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .image {
+            width: 1500px;
+            height: 500px;
+            animation: float 20s infinite alternate;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            100% {
+                transform: translate(-100px);
+            }
+        }
+        
+        #img-1 {
+            background-image: url('image/bg01.jpg');
+            background-size: 100% 100%;
+        }
+        
+        #img-2 {
+            background-image: url('image/bg02.jpg');
+            background-size: 100% 100%;
+        }
+        
+        #img-3 {
+            background-image: url('image/bg03.jpg');
+            background-size: 100% 100%;
+        }
+        
+        #img-4 {
+            background: url('image/bg04.jpg');
+            background-size: 100% 100%;
+        }
+        
+        #img-5 {
+            background: url('image/bg05.jpg');
+            background-size: 100% 100%;
+        }
+        
+        #img-6 {
+            background: url('image/bg06.jpg');
+            background-size: 100% 100%;
+        }
+        
+        .text_content {
+            position: absolute;
+            top: 100px;
+            left: 200px;
+        }
+        
+        .text_content img {
+            width: 270px;
+            height: 140px;
+        }
+        
+        .text_content h1 {
+            font-size: 60px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .game_area {
+            background-image: url(image/bg1.jpg);
+            border-top: 1px solid rgb(56, 111, 188);
+            border-bottom: 1px solid rgb(94, 94, 94);
+        }
+        
+        .game_text {
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+        
+        .game_text h3 {
+            color: white;
+        }
+        
+        .text_span {
+            font-size: 1rem;
+            color: rgb(56, 111, 188);
+            margin-left: 5px;
+        }
+        
+        .game_text h3:hover span {
+            color: white;
+        }
+        
+        .game_text h5 {
+            color: rgb(214, 214, 214);
+            margin: 2% 0;
+        }
+        
+        .img_list {
+            margin-bottom: 3%;
+            height: 178px;
+            width: 100%;
+        }
+        
+        .img_list img {
+            width: 150px;
+            position: absolute;
+        }
+/* =====class06======================================= */
+        
+        .pic {
+            width: 100%;
+            height: 386px;
+            background-color: black;
+        }
+        
+        .pic img {
+            position: absolute;
+            width: 100%;
+            display: none;
+        }
+/* =====class06结束========================================== */
+    </style>
+</head>
+
+<body>
+    <!--导航栏-->
+    <nav class="vipnav navbar-dark bg-dark fixed-top">
+        <a href="#"><img src="image/logo.png"></a>
+        <button class="vc_button" data-target="#vc_id">
+        </button>
+        <div class="vc_hide" id="vc_id">
+            <ul class="vc_list">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">游戏</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">商城</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">新闻</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">电子竞技</a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-primary">登录</button>
+        </div>
+    </nav>
+    <!-- 轮播图部分 -->
+    <div id="slide">
+        <div class="masked">
+            <div class="image" id="img-1">
+                <div class="text_content">
+                    <img src="image/1s.png" alt="">
+                    <h1>加入砰砰计划</h1>
+                </div>
+            </div>
+        </div>
+        <div class="masked">
+            <div class="image" id="img-2">
+                <div class="text_content">
+                    <img src="image/2s.png" alt="">
+                    <h1>爆笑星际包现已推出</h1>
+                </div>
+            </div>
+        </div>
+        <div class="masked">
+            <div class="image" id="img-3">
+                <div class="text_content">
+                    <img src="image/3s.png" alt="">
+                    <h1>推出新英雄</h1>
+                </div>
+            </div>
+        </div>
+        <div class="masked">
+            <div class="image" id="img-4">
+                <div class="text_content">
+                    <img src="image/4s.png" alt="">
+                    <h1>魔兽世界怀旧服</h1>
+                </div>
+            </div>
+        </div>
+        <div class="masked">
+            <div class="image" id="img-5">
+                <div class="text_content">
+                    <img src="image/5s.png" alt="">
+                    <h1>加入砰砰计划</h1>
+                </div>
+            </div>
+        </div>
+        <div class="masked">
+            <div class="image" id="img-6">
+                <div class="text_content">
+                    <img src="image/6s.png" alt="">
+                    <h1>最新扩展包“奥丹姆奇兵”</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 游戏 鼠标悬停-->
+    <div class="game_area">
+        <div class="game_text">
+            <h3>游戏
+                <span class="text_span">查看所有游戏 ></span>
+            </h3>
+            <h5>游戏娱乐</h5>
+        </div>
+        <div class="img_list">
+            <img src="image/1.jpg" alt="">
+            <img src="image/2.jpg" alt="">
+            <img src="image/3.jpg" alt="">
+            <img src="image/4.jpg" alt="">
+            <img src="image/5.jpg" alt="">
+            <img src="image/6.jpg" alt="">
+            <img src="image/7.jpg" alt="">
+            <img src="image/8.jpg" alt="">
+        </div>
+    </div>
+    <!-- 新闻 css动画效果-->
+    <img src="image/news.png" alt="">
+    <!--渐变轮播-->
+    <!-- <img src="image/banner.png" alt=""> -->
+<!-- =====class06========================================== -->
+    <div class="pic">
+        <img src="image/dt1.jpg" alt="图片">
+        <img src="image/dt2.jpg" alt="图片">
+        <img src="image/dt3.jpg" alt="图片">
+        <img src="image/dt4.jpg" alt="图片">
+        <img src="image/dt5.jpg" alt="图片">
+    </div>
+<!-- ====class06结束================================================ -->
+    <!-- footer -->
+    <img src="image/footer.png" alt="">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/vc.js"></script>
+    <script src="js/jsAnimate.js"></script>
+    <script>
+        // 轮播图
+        jsAnimate.slide({
+            id: "slide", // 字符串类型，根元素id，该属性不可省略
+            time: 3, // 数字类型，轮播时间，可省略，默认为3秒换一次图片
+            speed: 0.2, // 数字类型，切换速度，可省略，默认为0.3秒图片切换完毕
+        }, LeftClick, RightClick)
+
+
+        var content_img = $(".text_content img");
+        var content_h = $(".text_content h1");
+        // console.log(content_img);
+        // console.log(content_h);
+
+
+        function LeftClick(index) {
+            $(content_img).removeClass();
+            $(content_h).removeClass();
+            $(content_img[index]).addClass("slideRight");
+            $(content_h[index]).addClass("slideRight");
+        }
+
+        function RightClick(index) {
+            $(content_img).removeClass();
+            $(content_img[index]).addClass("slideLeft");
+            $(content_h).removeClass();
+            $(content_h[index]).addClass("slideLeft");
+        }
+
+
+        //图片抖动
+        var aImg = $(".img_list img");
+        var imgObj = getProper(aImg.length);
+        for (i = 0; i < aImg.length; i++) {
+            aImg[i].style.width = imgObj.imgWidth + "px";
+            aImg[i].style.left = 40 + i * imgObj.imgGap + "px";
+            aImg[i].onmouseover = onmouse;
+            var pos = parseInt(getStyle(aImg[i]));
+        }
+
+        function onmouse(event) {
+            var on_img = event.target
+            var arr = [30, -30, 28, -28, 0];
+
+            var shake = setInterval(motion, 20); //每隔20毫秒执行一次抖动
+
+            function motion() {
+                if (arr.length > 0) {
+                    on_img.style.top = pos + arr.shift() + "px";
+                } else {
+                    clearInterval(shake);
+                }
+            }
+        }
+
+//渐变轮播
+// ===class06====================================
+        var pic = $('.pic img')
+        var index = 0;
+        var length = pic.length;
+
+        function transform() {
+            pic.eq(index - 1).fadeOut(2000);
+            pic.eq(index).fadeIn(2000);
+            if (index === length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+        };
+        transform()
+        setInterval(transform, 3000);
+// ======class06结束========================================
+    </script>
+</body>
+
+</html>

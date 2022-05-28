@@ -1,0 +1,58 @@
+class07
+引用js文件
+	<script src="js/jquery.js"></script>
+	<script src="js/echarts.min.js"></script>
+    <script src="js/echarts-wordcloud.min.js"></script>
+    <script src="js/Chart.js"></script>
+	
+	
+画图使用的数据：
+	var dataSet = [{
+            name: "麦当劳",
+            value: 50
+        }, {
+            name: "肯德基",
+            value: 30
+        }, {
+            name: "必胜客",
+            value: 40
+        }, {
+            name: "宅急送",
+            value: 20
+        }, {
+            name: "奶茶",
+            value: 15
+        }, {
+            name: "茶",
+            value: 20
+        }, {
+            name: "好利来",
+            value: 25
+        }, {
+            name: "火锅",
+            value: 45
+        }, {
+            name: "冰激凌",
+            value: 25
+        }, {
+            name: "水果",
+            value: 30
+        }]
+
+	
+class08
+页面中的HTML部分：
+	<div class="container">
+		中间的HTML代码让学生自己写
+	</div>
+页面中的简单css设置：
+	<style>
+        body {
+            padding: 10px;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>游戏</title>
+    <style>
+        body {
+            background-image: url(image/bg1.png);
+        }
+        
+        .circle {
+            width: 14%;
+            position: absolute;
+            top: 200px;
+            left: 42%;
+        }
+        
+        .blbl {
+            width: 9%;
+            position: absolute;
+            top: 230px;
+            left: 45%;
+            animation: myrotate 1s infinite;
+        }
+        .diamond {
+            width: 5%;
+            position: absolute;
+            top: 250px;
+            left: 47%;
+            animation: myup 3s infinite;
+        }
+        @keyframes myrotate {
+            0% {
+                transform: rotate(0deg) scale(1.1);
+            }
+            25% {
+                transform: rotate(120deg);
+            }
+            50% {
+                transform: rotate(160deg) scale(1.1);
+            }
+            75% {
+                transform: rotate(200deg);
+            }
+            100% {
+                transform: rotate(300deg);
+            }
+        }
+        
+        @keyframes myup {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            25% {
+                transform: translate(0px, 8px);
+            }
+            50% {
+                transform: translate(0px, 0px);
+            }
+            75% {
+                transform: translate(0px, -8px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+        
+        .click {
+            width: 25%;
+            position: absolute;
+            top: 420px;
+            left: 37%;
+            animation: myscale 0.7s infinite;
+        }
+        
+        @keyframes myscale {
+            0% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="image/circle.png" alt="" class="circle">
+    <img src="image/blbl.png" alt="" class="blbl">
+    <img src="image/diamond.png" alt="" class="diamond">
+    <a href="index17.html">
+        <img src="image/click.png" alt="" class="click">
+    </a>
+</body>
+
+</html>

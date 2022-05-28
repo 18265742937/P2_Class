@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百科全书</title>
+    <link rel="stylesheet" href="/static/css/turn.css" />
+    <style>
+        .sp{
+            padding: 70px 40px;
+            font-size: 16px;
+            height: 100%;
+        }
+        .podd{
+            background-image: url('/static/img/page.png');
+            background-position: -480px 0;
+        }
+        .peven{
+            background-image: url('/static/img/page.png');
+        }
+        #cv1{
+            background-image: url('/static/img/cv1.png');
+        }
+        #cv2{
+            background-image: url('/static/img/cv2.png');
+        }
+        .cat{
+            margin: 5px 0;
+        }
+        .cat:hover{
+            background-color: rgba(102, 172, 230, 0.575);
+            border-radius: 5px;
+        }
+    </style>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/turn.min.js"></script>
+</head>
+<body>
+    <div class="flipbook-viewport">
+        <div class="container">
+            <div class="flipbook">
+                <!-- class 8 开始 -->
+                <div class="hard" id="cv1"></div>
+                <div class="hard" id="cv2"></div>
+                
+                {% for item in cat %}
+                    <div class="page">
+                        {% if loop.index % 2==1 %}
+                            <div class="sp podd">
+                                <!-- <h2>目录</h2> -->
+                                {% for i in item %}
+                                    <div class="cat">{{i[1]}}-------------------------------{{i[0]}}</div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="sp peven">
+                                <!-- <h2>目录</h2> -->
+                                {% for i in item %}
+                                    <div class="cat">{{i[1]}}-------------------------------{{i[0]}}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+               {% endfor %}
+
+                <!-- class 8结束 -->
+
+                {% for i in cities %}
+                    <div class="page">
+                        {% if i[0] % 2 == 1 %}
+                            <div class="sp podd">
+                                <p>{{ i[1] }}</p>
+                                <p>{{ i[4] }}</p>
+                            </div>
+                        {% else %}
+                            <div class="sp peven">
+                                <p>{{ i[1] }}</p>
+                                <p>{{ i[4] }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}        
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    $('.flipbook').turn({
+        width:960,
+        height:550,
+        autoCenter: true
+    });
+
+
+    </script>
+</body>
+</html>

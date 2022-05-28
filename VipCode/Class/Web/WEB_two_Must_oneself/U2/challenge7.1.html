@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="float" id="line1" style="width: 550px; height: 400px;"></div>
+    <div class="float" id="line2" style="width: 550px; height: 400px;"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        $.get('data/heros.json', function(heros) {
+            var positionMap = new Map();
+            var category = ["坦克", "战士", "刺客", "法师", "射手", "辅助"]
+            category.forEach(function(key) {
+                positionMap.set(key, []);
+            })
+            heros.forEach(function(el) {
+                var cur = positionMap.get(el["主要定位"]);
+                cur.push(el);
+            });
+
+            // 时间与蓝量增长
+            var rawData = [];
+            var name = [];
+            positionMap.get('射手').forEach(function(el) {
+                if (el['英雄'] == '马可波罗' || el['英雄'] == '后羿') {
+                    rawData.push(el);
+                    name.push(el['英雄']);
+                }
+            });
+            var dataArr = [];
+            rawData.forEach(function(el) {
+                var temp = [el['初始每5秒回蓝']];
+                var max = el['最大每5秒回蓝'];
+                for (var i = 2; i <= 20; i++) {
+                    var cur = el['初始每5秒回蓝'] + (i * el['每5秒回蓝成长']);
+                    if (cur > max) {
+                        temp.push(max);
+                    } else {
+                        temp.push(cur);
+                    }
+                }
+                dataArr.push(temp);
+            });
+            // console.log(dataArr)
+            var Time = [];
+            for (var i = 1; i <= 20; i++) {
+                Time.push(i * 5);
+            }
+            Chart.createMultLine('line1', dataArr, {
+                title: '时间增长与回蓝速度的增长',
+                legend: name,
+                xAxisLabel: Time,
+                showAvg: true,
+            });
+
+            // 时间与回血增长
+            var dataArr = [];
+            rawData.forEach(function(el) {
+                var temp = [el['初始每5秒回血']];
+                var max = el['最大每5秒回血'];
+                for (var i = 2; i <= 20; i++) {
+                    var cur = el['初始每5秒回血'] + (i * el['每5秒回血成长']);
+                    if (cur > max) {
+                        temp.push(max);
+                    } else {
+                        temp.push(cur);
+                    }
+                }
+                dataArr.push(temp);
+            });
+            Chart.createMultLine('line2', dataArr, {
+                title: '时间增长与回血速度的增长',
+                legend: name,
+                xAxisLabel: Time,
+                showAvg: true,
+            });
+        })
+    </script>
+</body>
+
+</html>

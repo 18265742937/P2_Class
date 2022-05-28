@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>新冠确诊率最高的省份</h3>
+    <div id="cloud" style="width: 600px;height:400px;"></div>
+    <div id="bar" style="width: 600px;height:400px;"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts-wordcloud.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        $.get('data/data.json', function(new_data) {
+            // 根据确诊人数画出云图
+            // console.log(new_data)
+            function data(index) {
+                var newD = []
+                new_data.data.forEach(function(el) {
+                    var data = {
+                        "name": el['province'],
+                        "value": el[index]
+                    }
+                    newD.push(data)
+                });
+                return newD
+            }
+            num_diagnosis = data('diagnosis')
+                // console.log(num_diagnosis)
+            Chart.createWordCold("cloud", num_diagnosis);
+
+
+            // 根据治愈人数画出柱状图（前十个省份）
+            data_list = data("cure")
+                // console.log(data_list)
+            data_list.sort(function(a,  b) {
+                // console.log(a.cure, b.cure)
+                if (parseInt(a.value) < parseInt(b.value)) {             
+                    return  1;            
+                } 
+                else if (parseInt(a.value) > parseInt(b.value)) {             
+                    return  -1;            
+                } else {
+                    return 0;
+                }    
+            });
+            data_list = data_list.slice(0, 10)
+            option = {
+                title: "新冠治愈率最高的省份",
+                color: 'rgb(11, 126, 250)',
+                seriesLabel: "治愈人数"
+            }
+            Chart.createBar('bar', data_list, option);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="image/qqZoneIcon.png">
+    <title>hello，欢迎来到我的空间</title>
+    <style>
+        body {
+            background-image: url(image/space_bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: rgb(235, 234, 234);
+        }
+        
+        .info {
+            width: 75%;
+            margin: 2% auto;
+        }
+        
+        .info h3 {
+            margin: 30px 0;
+        }
+/* ====================挑战一==================================== */
+        
+        .head {
+            position: relative;
+            float: left;
+            margin-right: 5%;
+        }
+        
+        .portrait {
+            float: left;
+        }
+        
+        .crown {
+            width: 50px;
+            position: absolute;
+            top: -20px;
+            left: 18px;
+        }
+/* ====================挑战一====================================== */
+
+/* =============class5============================== */
+        
+        .yellow {
+            position: relative;
+            float: left;
+        }
+        
+        .light {
+            animation: flash 0.5s infinite;
+            position: absolute;
+            left: 18px;
+        }
+        
+        @keyframes flash {
+            0% {
+                transform: scale(2);
+            }
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+        
+        .diamond {
+            width: 50px;
+        }
+        
+        .grade {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            font-size: 30px;
+            color: rgb(162, 163, 163);
+        }
+        
+        .grow_up {
+            float: left;
+        }
+        
+        .button {
+            float: left;
+        }
+/* ============class5结束===================================== */
+        
+        .like {
+            width: 80px;
+            float: right;
+        }
+        
+        .vc_tab {
+            width: 75%;
+            margin: 2% auto;
+        }
+        
+        .vc_tab li a {
+            font-size: 18px;
+            color: rgb(34, 34, 34);
+            margin-top: 2%;
+        }
+        
+        .middle_left img {
+            width: 100%;
+        }
+        
+        .middle_right img {
+            width: 100%;
+        }
+        
+        .footer img {
+            width: 100%;
+        }
+        
+        .mylogo {
+            margin-left: 8%;
+        }
+        
+        #diary {
+            background-color: darkslategrey;
+            padding: 5% 20%;
+        }
+        
+        #diary img {
+            width: 10%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <nav class="vipnav navbar-dark bg-dark">
+            <a class="mylogo" href="#"><img src="image/qqzone.png"></a>
+            <button class="vc_button" data-target="#vc_id"></button>
+            <div class="vc_hide" id="vc_id">
+                <ul class="vc_list">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">个人中心</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">我的主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">好友</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="vc_id1">
+                      装扮
+                    </a>
+                        <div class="dropdown-menu" aria-label="vc_id1">
+                            <a class="dropdown-item" href="#">主题1</a>
+                            <a class="dropdown-item" href="#">主题2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">主题3</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <h3>高大头的个人空间</h3>
+<!-- ====================挑战一================================ -->
+            <div class="head">
+                <img src="image/b_head3.png" alt="头像" class="portrait">
+                <img src="image/crown.png" alt="" class="crown">
+            </div>
+<!-- ======================挑战一================================= -->
+            
+            <h4>高大头</h4>
+<!-- ======================class5================================ -->
+            <div class="yellow">
+                <img src="image/light.png" alt="" class="light">
+                <img src="image/drill.png" alt="" class="diamond">
+                <span class="grade">Lv1</span>
+            </div>
+            <div class="grow_up">
+                成长进度条
+            </div>
+            <button class="button">续费黄钻</button>
+<!-- ================class5结束============================ -->
+
+            <img src="image/like0.png" alt="点赞" class="like">
+        </div>
+        <div style="clear:both;"></div>
+        <ul class="vc_tab">
+            <li class="nav-item">
+                <a class="vclink active" href="#home">主页</a>
+            </li>
+            <li class="nav-item">
+                <a class="vclink" href="#diary">日志</a>
+            </li>
+            <li class="nav-item">
+                <a class="vclink" href="#photo">图片</a>
+            </li>
+            <li class="nav-item">
+                <a class="vclink" href="#other">其它</a>
+            </li>
+        </ul>
+    </div>
+    <div class="vc_content">
+        <div class="vc_pane show active" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 middle_left">
+                        <img src="image/middle_left.png" alt="中部左">
+                    </div>
+                    <div class="col-sm-8 middle_right">
+                        <img src="image/middle_right.png" alt="中部右">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_pane" id="diary">
+            <h1 style="text-align:center">我的日志</h1>
+            <img class="rounded float-left" src="image/cat2.png" alt="">
+            <p>猫在高兴时，尾巴会竖起来，或者发出呼噜呼噜的声音。猫生气的时候，会使劲地摇尾巴。如果你惹它生气了，它有可能会猛地扑向你。猫经常清理自己的毛。小猫在很多时候，爱舔身子，自我清洁。饭后猫会用前爪擦擦胡子，被人抱后用舌头舔舔毛。这是猫的本能，去除自己身上的异味以躲避捕食者的追踪。猫的舌头上有许多粗糙的小突起，这是除去脏污最合适不过的工具。</p>
+            <div style="clear:both"></div>
+            <img class="rounded-circle mx-auto d-block" src="image/cat1.png" alt="">
+            <img class="img-thumbnail float-right" src="image/cat3.png" alt="">
+            <p>猫在高兴时，尾巴会竖起来，或者发出呼噜呼噜的声音。猫生气的时候，会使劲地摇尾巴。如果你惹它生气了，它有可能会猛地扑向你。猫经常清理自己的毛。小猫在很多时候，爱舔身子，自我清洁。饭后猫会用前爪擦擦胡子，被人抱后用舌头舔舔毛。这是猫的本能，去除自己身上的异味以躲避捕食者的追踪。猫的舌头上有许多粗糙的小突起，这是除去脏污最合适不过的工具。</p>
+            <div style="clear:both"></div>
+        </div>
+        <div class="vc_pane" id="photo">
+            <img src="image/album.png" alt="">
+        </div>
+        <div class="vc_pane" id="other">
+            <h1 style="text-align:center">其它</h1>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="image/footer.png" alt="脚部">
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery.js "></script>
+    <script type="text/javascript" src="js/popper.min.js "></script>
+    <script type="text/javascript" src="js/bootstrap.min.js "></script>
+    <script type="text/javascript" src="js/vc.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

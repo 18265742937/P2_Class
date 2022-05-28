@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas width="800" height="500" id="cvs"></canvas>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script>
+        var cvs = document.getElementById("cvs");
+        var ctx = cvs.getContext("2d");
+        var u = Util(cvs, ctx);
+        var data = [500, 1200, 300, 100];
+        // 数据求和
+        var dataTotal = 0;
+        data.forEach(
+            function (num, i) {
+                dataTotal = dataTotal + num;
+            }
+        );
+        // 饼图
+        var ox = 300;
+        var oy = 250;
+        var r = 120;
+        u.fillColor("rgb(193, 46, 52)");
+        u.circle(r, ox, oy, 0, 500 / dataTotal * 360);
+
+        u.fillColor("rgb(230, 182, 1)");
+        u.circle(r, ox, oy, 500 / dataTotal * 360, 500 / dataTotal * 360 + 1200 / dataTotal * 360);
+
+        u.fillColor("rgb(0, 152, 217)");
+        u.circle(r, ox, oy, 500 / dataTotal * 360 + 1200 / dataTotal * 360,
+            500 / dataTotal * 360 + 1200 / dataTotal * 360 + 300 / dataTotal * 360);
+
+        u.fillColor("rgb(43, 130, 29)");
+        u.circle(r, ox, oy,
+            500 / dataTotal * 360 + 1200 / dataTotal * 360 + 300 / dataTotal * 360,
+            500 / dataTotal * 360 + 1200 / dataTotal * 360 + 300 / dataTotal * 360 + 100 / dataTotal * 360);
+
+        /*********** class 2 开始***************************************************************************/
+        // u.fillColor("rgb(0, 255, 0)")
+        // u.rect(100, 100, 100, 50); 
+        // u.font(48, "宋体");
+        // u.text(210, 120, "你好");
+
+
+        // 绘制第一个图例
+        // var px = 460;
+        // var py = 130;
+        // u.fillColor("rgb(193, 46, 52)");
+        // u.rect(px, py, 40, 20);
+        // var tx = px + 50;
+        // var ty = py + 10;
+        // var text = "青铜白银 " + (data[0]/dataTotal * 100).toFixed(2) + "%";
+        // u.font(12, "宋体");
+        // u.text(tx, ty, text);
+
+        //定义颜色列表和文字列表
+        var color = ["rgb(193, 46, 52)", "rgb(230, 182, 1)", "rgb(0, 152, 217)", "rgb(43, 130, 29)"];
+        var dataText = ["青铜白银", "黄金铂金", "钻石王者", "不玩排位"];
+        // 图例
+        data.forEach(function (num, i) {
+            var px = 460;
+            var py = 130 + i * 30;
+            u.fillColor(color[i]);
+            u.rect(px, py, 40, 20);
+            var tx = px + 50;
+            var ty = py + 10;
+            var text = dataText[i] + (data[i] / dataTotal * 100).toFixed(2) + "%";
+            u.font(12, "宋体");
+            u.text(tx, ty, text);
+        });
+
+        
+        //主题
+        u.fillColor("black");
+        u.font(24, "微软雅黑");
+        u.text(200, 100, "王者荣耀玩家段位占比图");
+        /* ***************************class 2 结束**********************************************************/
+    </script>
+</body>
+
+</html>

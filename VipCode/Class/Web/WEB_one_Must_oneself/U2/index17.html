@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>游戏</title>
+    <style>
+        body {
+            background: url(image/bg2.png);
+        }
+        
+        .music {
+            visibility: hidden;
+        }
+        
+        .loading {
+            width: 40%;
+            height: 22px;
+            border-radius: 20px;
+            position: absolute;
+            left: 30%;
+            bottom: 60px;
+            background-color: greenyellow;
+            animation: bgcolor 3s 1;
+        }
+        
+        @keyframes bgcolor {
+            0% {
+                width: 0px;
+            }
+            100% {
+                width: 40%;
+            }
+        }
+        
+        .slider {
+            width: 45px;
+            position: absolute;
+            left: 30%;
+            bottom: 60px;
+            animation: trans 3s 1;
+            visibility: hidden;
+        }
+        
+        @keyframes trans {
+            0% {
+                left: 30%;
+                visibility: visible;
+            }
+            100% {
+                left: 70%;
+                visibility: visible;
+            }
+        }
+        
+        .click2 {
+            width: 280px;
+            position: absolute;
+            top: 270px;
+            left: 42%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading"></div>
+    <img src="image/slider.png" alt="" class="slider">
+    <audio src="audio/live.mp3" controls="controls" autoplay="autoplay"></audio>
+    <img src="image/font.png" alt="" class="click2">
+</body>
+
+</html>

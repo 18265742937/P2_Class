@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>王者荣耀英雄</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+        
+        .basic {
+            overflow: hidden;
+        }
+        
+        .float {
+            float: left;
+            padding: 20px 0;
+        }
+        
+        .typical {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="basic">
+            <h2>基本数据分析</h2>
+            <div id="hero" style="width: 500px;height:300px;"></div>
+            <p>结论：王者荣耀的英雄法师和战士角色较多，辅助最少，可以看出大家比较喜欢输出英雄，比较少选择辅助</p>
+            <div class="float" id="bar0" style="width: 400px; height: 300px;"></div>
+            <div class="float" id="bar1" style="width: 400px; height: 300px;"></div>
+            <div class="float" id="bar2" style="width: 400px; height: 300px;"></div>
+            <div class="float" id="bar3" style="width: 400px; height: 300px;"></div>
+            <div class="float" id="bar4" style="width: 400px; height: 300px;"></div>
+            <div class="float" id="bar5" style="width: 400px; height: 300px;"></div>
+        </div>
+        <div class="typical">
+            <h2>射手数据分析</h2>
+            <div class="float" id="radar" style="width: 600px; height: 400px;"></div>
+            <!-- 开始 ----------------------------------------------------------------------------------- -->
+            <div class="float" id="p1" style="width: 600px;height:400px;"></div>
+            <!-- 结束 ----------------------------------------------------------------------------------- -->
+
+        </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        $.get('data/heros.json', function(heros) {
+            // 位置分类
+            var positionMap = new Map();
+            var category = ["坦克", "战士", "刺客", "法师", "射手", "辅助"]
+            category.forEach(function(key) {
+                positionMap.set(key, []);
+            })
+            heros.forEach(function(el) {
+                var cur = positionMap.get(el["主要定位"]);
+                cur.push(el);
+            });
+
+            // 王者荣耀各个位置英雄数量
+            var data = [];
+            positionMap.forEach(function(val, key) {
+                var put = {
+                    name: key,
+                    value: val.length,
+                }
+                data.push(put);
+            });
+            Chart.createBar("hero", data, {
+                title: '王者荣耀各个位置英雄数量'
+            });
+
+
+            //根据属性值排序=============================================
+            function reorder(key) {
+                heros.sort(function(a, b) {
+                    if (a[key] < b[key]) {             
+                        return 1;            
+                    } 
+                    else if (a[key] > b[key]) {             
+                        return -1;            
+                    } else {
+                        return 0;
+                    } 
+                })
+                return heros
+            }
+
+            //根据属性整理数据
+            function find(arr, key) {
+                var Topdata = []
+                arr.slice(0, 10).forEach(function(el) {
+                    var dataFormat = {
+                        name: el['英雄'],
+                        value: el[key],
+                    }
+                    Topdata.push(dataFormat)
+                })
+                return Topdata
+            }
+
+
+            var color = ["#c12e34", "#0098d9", "#e6b600", "#2b821d", "#005eaa", "#339ca8"];
+            var att = ['最大生命', '最大法力', '最高物攻', '最大物防', '最大每5秒回血', '最大每5秒回蓝']
+            att.forEach(function(el, i) {
+                var temp = reorder(el); //根据属性值给数据排序
+                var tempF = find(temp, el); //根据属性，整理排序后的数据
+                var option = {
+                    title: el + '前十位英雄',
+                    color: color[i]
+                }
+                Chart.createBar("bar" + i, tempF, option)
+            })
+
+
+            //雷达图==================================================
+            var radarData = [];
+            var shooter = positionMap.get('射手');
+            shooter.forEach(function(el) {
+                var temp = {
+                    name: el['英雄'],
+                    value: [],
+                };
+                att.forEach(function(e) {
+                    temp.value.push(el[e]);
+                });
+                radarData.push(temp);
+            });
+            var radarIndicator = [];
+            att.forEach(function(el) {
+                var roeData = find(reorder(el), el)
+                var maxData = roeData[0]
+                radarIndicator.push({
+                    name: el,
+                    max: maxData.value,
+                });
+            })
+            var opt = {
+                title: '射手数据雷达图',
+                indicator: radarIndicator,
+            }
+            Chart.createRadar('radar', radarData, opt);
+
+//平行图---开始----------------------------------------------------------------------------------
+            var parallelAxiLabel = ['英雄', '初始生命', '最大生命', '初始法力', '最大法力', '初始物攻', '最高物攻', '初始物防', '最大物防'];
+            var parallelData = [];
+            shooter.forEach(function(el) {
+                var temp = [];
+                parallelAxiLabel.forEach(function(e) {
+                    temp.push(el[e]);
+                });
+                parallelData.push(temp);
+            });
+            // console.log(parallelData)
+            var parallelChart = {
+                legendName: '英雄',
+                label: parallelAxiLabel,
+                value: parallelData,
+            };
+            console.log(parallelChart)
+            var opt = {
+                title: '射手类英雄的数据对比'
+            }
+            Chart.createParallel("p1", parallelChart, opt);
+//平行图---结束----------------------------------------------------------------------------------
+        });
+    </script>
+</body>
+
+</html>

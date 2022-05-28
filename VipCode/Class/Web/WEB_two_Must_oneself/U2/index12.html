@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>王者荣耀英雄类型数量统计</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="basic">
+            <h2>基本数据分析</h2>
+            <div id="hero" style="width: 500px;height:300px;"></div>
+            <p>结论：王者荣耀所有英雄中，输出类英雄法师和战士的角色较多，辅助类英雄较少。</p>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        $.get('data/heros.json', function(heros) {
+            // 位置分类
+            var positionMap = new Map();
+            var category = ["坦克", "战士", "刺客", "法师", "射手", "辅助"]
+            category.forEach(function(key) {
+                positionMap.set(key, []);
+            })
+            heros.forEach(function(el) {
+                var cur = positionMap.get(el["主要定位"]);
+                cur.push(el);
+            });
+            console.log(positionMap)
+                // 王者荣耀每个分类中英雄的数量
+            var data = [];
+            positionMap.forEach(function(val, key) {
+                var put = {
+                    name: key,
+                    value: val.length,
+                }
+                data.push(put);
+            });
+            console.log(data)
+            var opt = {
+                title: '王者荣耀各个位置英雄数量'
+            }
+            Chart.createBar("hero", data, opt);
+        });
+    </script>
+</body>
+
+</html>
+

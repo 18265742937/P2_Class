@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas width="800" height="500" id="cvs"></canvas>
+    <script type="text/javascript" src="data/hw.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script>  
+        var cvs = document.getElementById("cvs");
+        var ctx = cvs.getContext("2d");
+        var u = Util(cvs, ctx); 
+
+        var xdata = [];
+        var ydata = [];
+        data.forEach(function(el, i) {
+            xdata.push(el[0]);
+            ydata.push(el[1]);
+        });
+        var xs = u.vcDotX(xdata, 5, "身高(cm)");
+        var ys = u.vcDotY(ydata, 5, "体重(g)");
+    
+        function move(p){
+            /************************  class 6 开始*************************/
+            var dx, dy, dot;
+            u.clear();
+            u.font(18, "Arial");
+            u.fillColor("black");
+            u.textAlign("center");
+            u.text(400, 30, "身高与体重的关系");
+            var xs = u.vcDotX(xdata, 5, "身高(cm)");
+            var ys = u.vcDotY(ydata, 5, "体重(g)");
+            /************************  class 6 结束*************************/
+
+            xs.forEach(function(x, i) {
+                var y = ys[i];
+                u.fillColor("rgba(46,199,201,0.5)");
+                u.circle(5, x, y);
+                if(u.isInPoint(p.x, p.y)) {
+                    u.fillColor("red");
+                    u.circle(5, x, y);
+
+                    /************************  class 6 开始*************************/
+                    dx = x;
+                    dy = y;
+                    dot = data[i];
+                    /************************  class 6 结束*************************/
+
+                }
+            });
+            /************************  class 6 开始*************************/
+            if(dot) {
+                drawTip(dx, dy, dot[0], dot[1]);
+            }
+             /************************  class 6 结束*************************/
+
+        }
+        u.onMouseMove(move);
+
+        /************************  class 6 开始*************************/
+        //绘制提示框
+        function drawTip(x,y,height, weight){
+            u.fillColor("rgba(0,0,0,0.5)");
+            u.rect(x+10, y, 80, 40);  
+            u.fillColor("white");
+            u.font(13,"Arial");
+            u.textAlign("left");
+            var ht = " 身高："+ height;
+            u.text(x+10, y+15, ht);
+            var wt = " 体重："+weight;
+            u.text(x+10, y+35, wt);
+        }
+         /************************  class 6 结束*************************/
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+1622185398477	geckodriver	INFO	Listening on 127.0.0.1:14310
+1622185401372	mozrunner::runner	INFO	Running command: "C:\\SoftWare\\火狐浏览器\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofileqc1oWK"
+1622185402079	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622185403983	Marionette	INFO	Listening on port 14321
+1622187992681	Marionette	INFO	Stopped listening on port 14321
+2185408436	mozrunner::runner	INFO	Running command: "C:\\SoftWare\\火狐浏览器\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofileKwJW4i"
+1622185409098	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622185411223	Marionette	INFO	Listening on port 14363
+1622185411605	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622185419273	Marionette	INFO	Stopped listening on port 14363
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1632100636781	geckodriver	INFO	Listening on 127.0.0.1:11851
+1632100639828	mozrunner::runner	INFO	Running command: "C:\\SoftWare\\火狐\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\qq934\\AppData\\Local\\Temp\\rust_mozprofileNxNMBB"
+1632100641647	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\qq934\\AppData\\Local\\Temp\\rust_mozprofileNxNMBB\\search.json.mozlz4", (void 0)))
+1632100646295	Marionette	INFO	Listening on port 11862
+1632100646417	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1632101635992	Marionette	INFO	Stopped listening on port 11862
+JavaScript error: resource:///modules/Interactions.jsm, line 230: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.global.min.js, line 10: NetworkError: A network error occurred.
+1632528458018	geckodriver	INFO	Listening on 127.0.0.1:14079
+1632528460552	mozrunner::runner	INFO	Running command: "C:\\SoftWare\\火狐\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\qq934\\AppData\\Local\\Temp\\rust_mozprofile54JKyS"
+1632528461760	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\qq934\\AppData\\Local\\Temp\\rust_mozprofile54JKyS\\search.json.mozlz4", (void 0)))
+1632528466274	Marionette	INFO	Listening on port 14087
+1632528466435	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1632528475025	Marionette	INFO	Stopped listening on port 14087
+JavaScript error: resource:///modules/Interactions.jsm, line 230: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.global.min.js, line 10: NetworkError: A network error occurred.
+JavaScript error: https://game.gtimg.cn/images/js/PTT/ping_tcss_tgideas_https_min.js, line 1: NetworkError: A network error occurred.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\qq934\AppData\Local\Temp\rust_mozprofile54JKyS\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1651101048345	geckodriver	INFO	Listening on 127.0.0.1:1690
+1651101051386	mozrunner::runner	INFO	Running command: "C:\\软件\\火狐浏览器\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofileJjTnSs"
+1651101052016	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofileJjTnSs\\search.json.mozlz4", (void 0)))
+1651101055171	Marionette	INFO	Listening on port 1728
+Read port: 1728
+1651101055270	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651101066165	Marionette	INFO	Stopped listening on port 1728
+JavaScript error: https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.global.min.js, line 10: NetworkError: A network error occurred.
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\LCP\AppData\Local\Temp\rust_mozprofileJjTnSs\protections.sqlite
+1651103195373	geckodriver	INFO	Listening on 127.0.0.1:2958
+1651103198424	mozrunner::runner	INFO	Running command: "C:\\软件\\火狐浏览器\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofileSyYQSw"
+1651103198980	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofileSyYQSw\\search.json.mozlz4", (void 0)))
+1651103201091	Marionette	INFO	Listening on port 2982
+Read port: 2982
+1651103201215	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651103212752	Marionette	INFO	Stopped listening on port 2982
+JavaScript error: https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.global.min.js, line 10: NetworkError: A network error occurred.
+JavaScript error: https://game.gtimg.cn/images/js/PTT/ping_tcss_tgideas_https_min.js, line 1: NetworkError: A network error occurred.
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_CommitWindowContextTransaction) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardWindowContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PContent::Msg_ScriptErrorWithStack) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1651118281544	geckodriver	INFO	Listening on 127.0.0.1:9537
+1651118284626	mozrunner::runner	INFO	Running command: "C:\\软件\\火狐浏览器\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofilebA4NLn"
+1651118285228	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofilebA4NLn\\search.json.mozlz4", (void 0)))
+1651118287345	Marionette	INFO	Listening on port 9563
+Read port: 9563
+1651118287462	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651118302551	Marionette	INFO	Stopped listening on port 9563
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.global.min.js, line 10: NetworkError: A network error occurred.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+1651118307897	geckodriver	INFO	Listening on 127.0.0.1:9646
+1651118310927	mozrunner::runner	INFO	Running command: "C:\\软件\\火狐浏览器\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofile1tIwtd"
+1651118311462	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofile1tIwtd\\search.json.mozlz4", (void 0)))
+1651118313579	Marionette	INFO	Listening on port 9672
+Read port: 9672
+1651118313723	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651118335553	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1651118341484	Marionette	INFO	Stopped listening on port 9672
+JavaScript error: https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.global.min.js, line 10: NetworkError: A network error occurred.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1651118347139	geckodriver	INFO	Listening on 127.0.0.1:9888
+1651118354881	geckodriver	INFO	Listening on 127.0.0.1:9900
+1651118357935	mozrunner::runner	INFO	Running command: "C:\\软件\\火狐浏览器\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofilegCSfEH"
+1651118358512	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\LCP\\AppData\\Local\\Temp\\rust_mozprofilegCSfEH\\search.json.mozlz4", (void 0)))
+1651118360662	Marionette	INFO	Listening on port 9922
+Read port: 9922
+1651118360738	RemoteAgent	WARN	TLS certificate errors will be ignored for this session

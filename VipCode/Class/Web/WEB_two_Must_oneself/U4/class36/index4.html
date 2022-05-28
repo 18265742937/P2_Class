@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市表格</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+</head>
+<body>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+           <td>城市</td><td>介绍</td>
+        </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+                <tr>
+                    {% for j in i %}
+                        <td>{{ j }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,104 @@
+#phote {
+  /**照片墙背景黑色**/
+  background-color: #152836;
+}
+#photo > ul {
+  margin-bottom: 0;
+}
+#photo > ul > li {
+  float: left;
+  margin-bottom: 15px;
+  width: 220px;
+}
+#photo > ul > li a {
+  border: 3px solid #fff;
+  border-radius: 3px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+#photo > ul > li a > img {
+  transition: transform 0.15s ease 0s;
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+#photo > ul > li a:hover > img {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+#photo > ul > li a:hover .demo-gallery-poster > img {
+  opacity: 1;
+}
+#photo > ul > li a .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: background-color 0.15s ease 0s;
+}
+#photo > ul > li a .demo-gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transition: opacity 0.3s ease 0s;
+}
+#photo > ul > li a:hover .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#photo .justified-gallery > a > img {
+  transition: transform 0.15s ease 0s;
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+#photo .justified-gallery > a:hover > img {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+#photo .justified-gallery > a:hover .demo-gallery-poster > img {
+  opacity: 1;
+}
+#photo .justified-gallery > a .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: background-color 0.15s ease 0s;
+}
+#photo .justified-gallery > a .demo-gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transition: opacity 0.3s ease 0s;
+}
+#photo .justified-gallery > a:hover .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#photo .video .demo-gallery-poster img {
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  opacity: 0.8;
+  width: 48px;
+}
+#photo.dark > ul > li a {
+  border: 3px solid #04070a;
+}
+.home #photo {
+  padding-bottom: 80px;
+}
+
+#lightgallery {
+  width: 1000px;
+  margin: 0 auto;
+}

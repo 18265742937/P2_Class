@@ -1,0 +1,228 @@
+{
+ "data": [
+  {
+   "province": "浙江省",
+   "diagnosis": "1075",
+   "Suspected": "0",
+   "cure": "190",
+   "death": "0"
+  },
+  {
+   "province": "湖北省",
+   "diagnosis": "27100",
+   "Suspected": "23638",
+   "cure": "1454",
+   "death": "780"
+  },
+  {
+   "province": "四川省",
+   "diagnosis": "386",
+   "Suspected": "0",
+   "cure": "60",
+   "death": "1"
+  },
+  {
+   "province": "山东省",
+   "diagnosis": "435",
+   "Suspected": "0",
+   "cure": "51",
+   "death": "1"
+  },
+  {
+   "province": "重庆市",
+   "diagnosis": "446",
+   "Suspected": "0",
+   "cure": "48",
+   "death": "2"
+  },
+  {
+   "province": "河南省",
+   "diagnosis": "1033",
+   "Suspected": "0",
+   "cure": "137",
+   "death": "6"
+  },
+  {
+   "province": "湖南省",
+   "diagnosis": "838",
+   "Suspected": "0",
+   "cure": "170",
+   "death": "1"
+  },
+  {
+   "province": "江苏省",
+   "diagnosis": "468",
+   "Suspected": "0",
+   "cure": "69",
+   "death": "0"
+  },
+  {
+   "province": "广东省",
+   "diagnosis": "1120",
+   "Suspected": "0",
+   "cure": "126",
+   "death": "1"
+  },
+  {
+   "province": "上海市",
+   "diagnosis": "293",
+   "Suspected": "0",
+   "cure": "44",
+   "death": "1"
+  },
+  {
+   "province": "甘肃省",
+   "diagnosis": "79",
+   "Suspected": "0",
+   "cure": "13",
+   "death": "1"
+  },
+  {
+   "province": "安徽省",
+   "diagnosis": "779",
+   "Suspected": "0",
+   "cure": "68",
+   "death": "1"
+  },
+  {
+   "province": "天津市",
+   "diagnosis": "90",
+   "Suspected": "0",
+   "cure": "4",
+   "death": "1"
+  },
+  {
+   "province": "北京市",
+   "diagnosis": "326",
+   "Suspected": "0",
+   "cure": "37",
+   "death": "2"
+  },
+  {
+   "province": "福建省",
+   "diagnosis": "250",
+   "Suspected": "0",
+   "cure": "26",
+   "death": "0"
+  },
+  {
+   "province": "陕西省",
+   "diagnosis": "208",
+   "Suspected": "0",
+   "cure": "25",
+   "death": "0"
+  },
+  {
+   "province": "内蒙古自治区",
+   "diagnosis": "54",
+   "Suspected": "0",
+   "cure": "5",
+   "death": "0"
+  },
+  {
+   "province": "海南省",
+   "diagnosis": "128",
+   "Suspected": "0",
+   "cure": "15",
+   "death": "2"
+  },
+  {
+   "province": "宁夏回族自治区",
+   "diagnosis": "45",
+   "Suspected": "0",
+   "cure": "13",
+   "death": "0"
+  },
+  {
+   "province": "江西省",
+   "diagnosis": "740",
+   "Suspected": "0",
+   "cure": "72",
+   "death": "0"
+  },
+  {
+   "province": "山西省",
+   "diagnosis": "115",
+   "Suspected": "0",
+   "cure": "21",
+   "death": "0"
+  },
+  {
+   "province": "广西壮族自治区",
+   "diagnosis": "195",
+   "Suspected": "0",
+   "cure": "18",
+   "death": "1"
+  },
+  {
+   "province": "贵州省",
+   "diagnosis": "96",
+   "Suspected": "0",
+   "cure": "7",
+   "death": "1"
+  },
+  {
+   "province": "新疆维吾尔自治区",
+   "diagnosis": "45",
+   "Suspected": "0",
+   "cure": "0",
+   "death": "0"
+  },
+  {
+   "province": "河北省",
+   "diagnosis": "206",
+   "Suspected": "0",
+   "cure": "30",
+   "death": "2"
+  },
+  {
+   "province": "黑龙江省",
+   "diagnosis": "307",
+   "Suspected": "0",
+   "cure": "13",
+   "death": "6"
+  },
+  {
+   "province": "吉林省",
+   "diagnosis": "78",
+   "Suspected": "0",
+   "cure": "5",
+   "death": "1"
+  },
+  {
+   "province": "云南省",
+   "diagnosis": "140",
+   "Suspected": "0",
+   "cure": "17",
+   "death": "0"
+  },
+  {
+   "province": "辽宁省",
+   "diagnosis": "105",
+   "Suspected": "0",
+   "cure": "8",
+   "death": "0"
+  },
+  {
+   "province": "青海省",
+   "diagnosis": "18",
+   "Suspected": "0",
+   "cure": "3",
+   "death": "0"
+  },
+  {
+   "province": "西藏自治区",
+   "diagnosis": "1",
+   "Suspected": "0",
+   "cure": "0",
+   "death": "0"
+  },
+  {
+   "province": "澳门",
+   "diagnosis": "2",
+   "Suspected": "0",
+   "cure": "0",
+   "death": "0"
+  }
+ ]
+}

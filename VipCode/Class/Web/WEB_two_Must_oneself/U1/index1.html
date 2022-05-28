@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>饼图</title>
+</head>
+
+<body>
+    <!-- 设置画布的宽度/高度/id -->
+    <canvas width="800" height="500" id="cvs"></canvas>
+    <!-- 连接js文件 -->
+    <script type="text/javascript" src="js/util.js"></script>
+    <!-- 创建Script -->
+    <script>
+        // 连接h5画布
+        var cvs = document.getElementById("cvs");
+        //得到画笔
+        var ctx = cvs.getContext("2d");
+        //生成工具箱(将画布和画笔合并)
+        var u = Util(cvs, ctx);
+        //数据源
+        var data = [500, 1200, 300, 100];
+
+        //数据求和
+        var dataTotal = 0;
+        data.forEach(
+            function (num, i) {
+                dataTotal = dataTotal + num;
+            }
+        );
+
+        // 饼图(半径,位置)
+        var ox = 300;
+        var oy = 250;
+        var r = 120;
+        u.fillColor("rgb(193, 46, 52)");
+        u.circle(r, ox, oy, 0, 500 / dataTotal * 360);
+
+        u.fillColor("rgb(230, 182, 1)");
+        u.circle(r, ox, oy, 500 / dataTotal * 360, 500 / dataTotal * 360 + 1200 / dataTotal * 360);
+
+        u.fillColor("rgb(0, 152, 217)");
+        u.circle(r, ox, oy, 500 / dataTotal * 360 + 1200 / dataTotal * 360,
+            500 / dataTotal * 360 + 1200 / dataTotal * 360 + 300 / dataTotal * 360);
+
+        u.fillColor("rgb(43, 130, 29)");
+        u.circle(r, ox, oy,
+            500 / dataTotal * 360 + 1200 / dataTotal * 360 + 300 / dataTotal * 360,
+            500 / dataTotal * 360 + 1200 / dataTotal * 360 + 300 / dataTotal * 360 + 100 / dataTotal * 360);
+
+        /************************************  挑战优化代码开始   *********************************************/
+        // var color = ["rgb(193, 46, 52)", "rgb(230, 182, 1)", "rgb(0, 152, 217)",  "rgb(43, 130, 29)"];
+        // var startDeg = 0;
+        // data.forEach(
+        //     function(num, i) {
+        //         var endDeg = startDeg + num/dataTotal * 360;
+        //         u.fillColor(color[i]);
+        //         u.circle(r, ox, oy, startDeg, endDeg);
+        //         startDeg = endDeg;
+        //     }
+        // );
+        /************************************  挑战优化代码结束   *********************************************/
+    </script>
+    <!--------------------------------------------------结束---------------------------------------------------->
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="hero1" style="width: 500px;height:300px;"></div>
+    <div id="hero2" style="width: 500px;height:300px;"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        $.get('data/heros.json', function(heros) {
+
+            var positionMap = new Map();
+            // 两种分类方法
+            // heros.forEach(function(el) {
+            //     positionMap.set(el["主要定位"], []);
+            // });
+            // heros.forEach(function(el) {
+            //     var cur = positionMap.get(el["主要定位"]);
+            //     cur.push(el);
+            // });
+            heros.forEach(function(el) {
+                if (positionMap.get(el["主要定位"])) {
+                    var cur = positionMap.get(el["主要定位"]);
+                    cur.push(el);
+                    positionMap.set(el["主要定位"], cur);
+                } else {
+                    positionMap.set(el["主要定位"], [el]);
+                }
+            });
+
+            console.log(positionMap)
+                // 王者荣耀每个分类中英雄的数量
+            var data = [];
+            positionMap.forEach(function(val, key) {
+                var put = {
+                    name: key,
+                    value: val.length,
+                }
+                data.push(put);
+            });
+            console.log(data)
+            var opt = {
+                title: '王者荣耀各个位置英雄数量'
+            }
+            Chart.createBar("hero1", data, opt);
+            // 位置分类
+            var positionMap = new Map();
+            var category = ["远程", "近战"]
+            category.forEach(function(key) {
+                positionMap.set(key, []);
+            })
+            heros.forEach(function(el) {
+                var cur = positionMap.get(el["攻击范围"]);
+                cur.push(el);
+            });
+
+
+            console.log(positionMap)
+                // 王者荣耀每个分类中英雄的数量
+            var data = [];
+            positionMap.forEach(function(val, key) {
+                var put = {
+                    name: key,
+                    value: val.length,
+                }
+                data.push(put);
+            });
+            console.log(data)
+            var opt = {
+                title: '王者英雄的攻击范围'
+            }
+            Chart.createBar("hero2", data, opt);
+        });
+    </script>
+</body>
+
+</html>

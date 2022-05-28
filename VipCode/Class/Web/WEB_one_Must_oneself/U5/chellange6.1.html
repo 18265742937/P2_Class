@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content {
+            height: 100px;
+        }
+        
+        .content h3 {
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3>长征</h3>
+        <h3>毛泽东</h3>
+        <h3>红军不怕远征难，</h3>
+        <h3>万水千山只等闲。</h3>
+        <h3>五岭逶迤腾细浪，</h3>
+        <h3>乌蒙磅礴走泥丸。</h3>
+        <h3>金沙水拍云崖暖，</h3>
+        <h3>大渡桥横铁索寒。</h3>
+        <h3>更喜岷山千里雪，</h3>
+        <h3>三军过后尽开颜。</h3>
+    </div>
+    <button type="button">请点击我</button>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+        var pic = $('h3');
+        var index = 0;
+        var length = pic.length;
+        $("button").click(transform);
+
+        function transform() {
+            pic.eq(index - 1).fadeOut(2000);
+            pic.eq(index).fadeIn(2000);
+            if (index === length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+        };
+        transform();
+    </script>
+</body>
+
+</html>

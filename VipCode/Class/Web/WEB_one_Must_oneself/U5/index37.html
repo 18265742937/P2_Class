@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="image/icon.png">
+    <title>星际战甲</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        img {
+            width: 100%;
+        }
+/* =====开始============================================================================== */
+        
+        .vipnav {
+            opacity: 0.8;
+        }
+        
+        .masked {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .image {
+            width: 1500px;
+            height: 500px;
+            background-image: url('image/bg01.jpg');
+            background-size: 100% 100%;
+            animation: float 20s infinite alternate;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            100% {
+                transform: translate(-100px);
+            }
+        }
+        /* 可以给到学生 */
+        
+        .game_area {
+            background-image: url(image/bg1.jpg);
+            border-top: 1px solid rgb(56, 111, 188);
+            border-bottom: 1px solid rgb(94, 94, 94);
+        }
+        
+        .game_text {
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+        
+        .game_text h3 {
+            color: white;
+        }
+        
+        .text_span {
+            font-size: 1rem;
+            color: rgb(56, 111, 188);
+            margin-left: 5px;
+        }
+        
+        .game_text h3:hover span {
+            color: white;
+        }
+        
+        .game_text h5 {
+            color: rgb(214, 214, 214);
+            margin: 2% 0;
+        }
+        
+        .img_list {
+            width: 95%;
+            margin-bottom: 3%;
+            margin-left: 3%;
+        }
+        
+        .img_list img {
+            width: 100%;
+        }
+/* =====class01结束============================================================================ */
+    </style>
+</head>
+
+<body>
+<!-- ========开始============================================================================= -->
+    <!--导航栏-->
+    <nav class="vipnav navbar-dark bg-dark fixed-top">
+        <a href="#"><img src="image/logo.png"></a>
+        <button class="vc_button" data-target="#vc_id">
+        </button>
+        <div class="vc_hide" id="vc_id">
+            <ul class="vc_list">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">游戏</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">商城</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">新闻</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">电子竞技</a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-primary">登录</button>
+        </div>
+    </nav>
+    <!-- banner部分 -->
+    <div class="masked">
+        <div class="image"></div>
+    </div>
+    <!-- 游戏 鼠标悬停-->
+    <div class="game_area">
+        <div class="game_text">
+            <h3>游戏
+                <span class="text_span">查看所有游戏 ></span>
+            </h3>
+            <h5>游戏娱乐</h5>
+        </div>
+        <div class="img_list">
+            <img src="image/img_list.png" alt="">
+        </div>
+    </div>
+<!-- ======class01结束=========================================================================== -->
+    <!-- 新闻 css动画效果-->
+    <img src="image/news.png" alt="">
+    <!--渐变轮播-->
+    <img src="image/gradual.png" alt="">
+    <!-- footer -->
+    <img src="image/footer.png" alt="">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/vc.js"></script>
+</body>
+
+</html>

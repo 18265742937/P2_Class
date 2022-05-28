@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VIP商城</title>
+    <!-- 添加头部动画并解锁脚部
+     知识点：
+     1.:hover
+     2.脚部div宽50%
+     3.脚部div居中
+     4.圆角边框
+    -->
+</head>
+<style>
+    .header {
+        background-color: rgb(52, 87, 174);
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .header img {
+/* 开始修改 ****************************************************/
+        width: 5.5%;
+        border: 2px solid rgb(52, 87, 174, 0);
+/* 结束修改 ****************************************************/
+    }
+
+/* 开始 *******************************************************/
+     .header img:hover {
+        border: 2px solid white;
+    }
+    
+    .middle img {
+        border: 10px solid white;
+    }
+    
+    .footer img {
+        width: 50px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+    .footer {
+        background-color: white;
+        width: 50%;
+        margin-left: 25%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        text-align: center;
+    }
+/* 结束 *******************************************************/
+
+</style>
+
+<body style="background-image: url(image/bg.jpg);margin:0;">
+    <div style="position:fixed;z-index: 1;width:100%;">
+        <img src="image/head1.jpg" alt="" style="width:100%;">
+        <div class="header">
+            <img src="image/picture1.jpg" alt="">
+            <img src="image/picture2.jpg" alt="">
+            <img src="image/picture3.jpg" alt="">
+            <img src="image/picture4.jpg" alt="">
+            <img src="image/picture5.jpg" alt="">
+            <img src="image/picture6.jpg" alt="">
+            <img src="image/picture7.jpg" alt="">
+            <img src="image/picture8.jpg" alt="">
+            <img src="image/picture9.jpg" alt="">
+            <img src="image/picture10.jpg" alt="">
+            <img src="image/picture11.jpg" alt="">
+            <img src="image/picture12.jpg" alt="">
+            <img src="image/picture13.jpg" alt="">
+            <img src="image/picture14.jpg" alt="">
+            <img src="image/picture15.jpg" alt="">
+            <img src="image/picture16.jpg" alt="">
+        </div>
+    </div>
+    <div style="position:absolute;top:100px;" class="middle">
+        <img src="image/photo1.jpg" alt="" style="position:absolute;top:100px;left:30px;">
+        <img src="image/photo2.jpg" alt="" style="position:absolute;top:230px;left:430px;">
+        <img src="image/photo3.jpg" alt="" style="position:absolute;top:100px;left:830px;">
+        <img src="image/photo4.jpg" alt="" style="position:absolute;top:400px;left:30px;">
+        <img src="image/photo5.jpg" alt="" style="position:absolute;top:550px;left:430px;">
+        <img src="image/photo6.jpg" alt="" style="position:absolute;top:400px;left:830px;">
+        <img src="image/photo7.jpg" alt="" style="position:absolute;top:700px;left:30px;">
+        <img src="image/photo8.jpg" alt="" style="position:absolute;top:850px;left:430px;">
+        <img src="image/photo9.jpg" alt="" style="position:absolute;top:700px;left:830px;">
+    </div>
+<!-- 开始修改 ------------------------------------------------------->
+    <div style="position:fixed;bottom:0px;" class="footer">
+        <img src="image/btn_1.jpg" alt="">
+        <img src="image/btn_2.jpg" alt="">
+        <img src="image/btn_3.jpg" alt="">
+        <img src="image/btn_4.jpg" alt="">
+        <img src="image/btn_5.jpg" alt="">
+<!-- 结束修改 ------------------------------------------------------->
+    </div>
+</body>
+
+</html>

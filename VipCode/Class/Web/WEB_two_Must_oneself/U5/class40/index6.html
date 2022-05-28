@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百科全书</title>
+    <link rel="stylesheet" href="/static/css/turn.css" />
+    <style>
+        .sp{
+            padding: 70px 40px;
+            font-size: 16px;
+            height: 100%;
+        }
+        .podd{
+            background-image: url('/static/img/page.png');
+            background-position: -480px 0;
+        }
+        .peven{
+            background-image: url('/static/img/page.png');
+        }
+    </style>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/turn.min.js"></script>
+</head>
+<body>
+    <div class="flipbook-viewport">
+        <div class="container">
+            <div class="flipbook">
+                {% for i in cities %}
+                    <div class="page">
+                        {% if i[0] % 2 == 1 %}
+                            <div class="sp podd">
+                                <p>{{ i[1] }}</p>
+                                <p>{{ i[4] }}</p>
+                            </div>
+                        {% else %}
+                            <div class="sp peven">
+                                <p>{{ i[1] }}</p>
+                                <p>{{ i[4] }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}        
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    $('.flipbook').turn({
+        width:960,
+        height:550,
+        autoCenter: true
+    });
+    </script>
+</body>
+</html>

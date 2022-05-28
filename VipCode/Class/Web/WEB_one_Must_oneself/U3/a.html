@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="image/qqZoneIcon.png">
+    <title>hello,welcome to my slot!</title>
+    <style>
+        body {
+            background-color: rgb(235, 234, 234);
+            background-image: url(../代码/img/space_bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .mylogo {
+            margin-left: 8%;
+        }
+
+        .header,
+        .header img,
+        .footer,
+        .footer img {
+            width: 100%;
+        }
+
+        .middle_left {
+            margin-left: 8%;
+            width: 80%;
+        }
+
+        .middle_right {
+            margin-left: 5%;
+            width: 80%;
+        }
+
+        .info {
+            width: 75%;
+        }
+
+        .info h3 {
+            margin: 30px 0;
+        }
+
+        .b_head3 {
+            float: left;
+            margin-left: 5%;
+
+        }
+
+        .diamond {
+            width: 370px;
+        }
+
+        .like {
+            width: 80px;
+            float: right;
+        }
+
+        .vc_tab {
+            width: 75%;
+            margin: 2% auto;
+        }
+
+        .vc_tab li a {
+            font-size: 18px;
+            color: rgb(35, 34, 34);
+            margin-top: 2%;
+        }
+
+        #diary {
+            background-color: darkslategray;
+            padding: 5% 20%;
+        }
+
+        #diary img {
+            width: 10%;
+        }
+
+        .yellow {
+            position: relative;
+            float: left;
+        }
+
+        .light_image {
+            animation: flash 0.5s infinite;
+            position: absolute;
+            left: 18px;
+        }
+
+        @keyframes flash {
+            0% {
+                transform: scale(2);
+            }
+
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+
+        .drill {
+            width: 50px;
+        }
+
+        .span_lv {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            font-size: 30px;
+            color: rgb(165, 164, 194);
+
+        }
+
+        .grow_up {
+            float: left;
+        }
+
+        .button_122 {
+            float: left;
+            background-color: rgb(255, 208, 0);
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 15px;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .button_123 {
+            float: left;
+            color: rgb(183, 185, 26);
+            background-color: rgb(123, 218, 9);
+        }
+
+        .picture_head {
+            float: left;
+        }
+
+        .crown {
+            width: 12%;
+        }
+
+        .bar {
+            width: 200px;
+            height: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        .color {
+            width: 40%;
+            height: 10px;
+            background-color: rgb(6, 209, 245);
+            border-radius: 5px;
+        }
+
+        .like {
+            width: 80px;
+            line-height: 40px;
+            float: right;
+            background-color: red;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .like a {
+            text-decoration: none;
+        }
+
+        .like a img {
+            margin-left: 3%;
+            padding-bottom: 7px;
+        }
+
+        .number {
+            font-size: 20px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="vipnav navbar-dark bg-dark">
+            <a href="#" class="mvlogo"><img src="image/qqzone.png" alt=""></a>
+            <button class="vc_button" data-target="#vc_id"></button>
+
+            <div class="vc_hide" id="vc_id"></div>
+            <ul class="vc_list">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">个人中心</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">我的主页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">好友</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" id="vc_id1" class="nav-link dropdown-toggle">装扮</a>
+                    <div class="dropdown-menu" aria-label="vc_id1">
+                        <a class="dropdown-item" href="#">主题1</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">主题2</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">主题3</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="info">
+        <h3>旧都察台合熬夜的个人空间</h3>
+
+
+        <div class="head">
+            <img src="image/b_head3.png" alt="" class="b_head3">
+            <img src="image/crown.png" alt="" class="crown">
+        </div>
+
+        <h4>旧都察台合熬夜</h4>
+
+        <div class="yellow">
+            <img src="image/light.png" alt="头像已走丢" class="light_image">
+            <img src="image/drill.png" alt="" class="drill">
+            <span class="span_lv">Lv1</span>
+        </div>
+
+        <div class="grow_up">
+            成长进度条
+        </div>
+
+        <span>成长值1 成长速度-10点/点击</span>
+        <div class="bar">
+            <div class="color">40%</div>
+        </div>
+
+        <button class="button_122">续费黄钻</button>
+        <button class="button_123">黄钻大礼包，只需6元！</button>
+        <div class="like">
+            <a href="#">
+                <img src="image/like2.png" alt="">
+            </a>
+            <span class="number"></span>
+        </div>
+
+    </div>
+    <ul class="vc_tab">
+        <li class="nav_item">
+            <a href="#home" class="vclink active">主页</a>
+        </li>
+        <li class="nav_item">
+            <a class="vclink" href="#diary">日志</a>
+        </li>
+        <li class="nav_item">
+            <a class="vclink" href="#photo">图片</a>
+        </li>
+        <li class="nav_item">
+            <a class="vclink" href="#other">其它</a>
+        </li>
+    </ul>
+    <div class="vc_content">
+        <div class="vc_pane show active" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 middle-left">
+                        <img src="image/middle_left.png" alt="中部左">
+                    </div>
+                    <div class="col-sm-8 middle-right">
+                        <img src="image/middle_right.png" alt="中部右">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_pane" id="diary">
+            <h1 style="text-align:center">我的日志</h1>
+            <img src="image/cat2.png " alt="" class="rounded-cat">
+            <p>猫的性格实在有些古怪，说它老实吧，它的确有时候很乖。他会找个暖和的地方，成天睡大觉，无忧无虑，什么事也不过问。可是，它决定要出去玩玩，就会出走一天一夜，任凭谁怎么呼唤，它都不肯回来。说它贪玩吧，的确是啊，要不怎么会一天一夜不肯回家呢？可是他听到老鼠的一点响动，又是多么尽职。它屏息凝视，一连就是几个钟头，非把老鼠等出来不可！
+            </p>
+            <div style="clear:both"></div>
+            <h1 style="text-align:center">我的日志</h1>
+            <img src="image/cat1.png " alt="" class="rounded-cat2">
+            <p>猫的性格实在有些古怪，说它老实吧，它的确有时候很乖。他会找个暖和的地方，成天睡大觉，无忧无虑，什么事也不过问。可是，它决定要出去玩玩，就会出走一天一夜，任凭谁怎么呼唤，它都不肯回来。说它贪玩吧，的确是啊，要不怎么会一天一夜不肯回家呢？可是他听到老鼠的一点响动，又是多么尽职。它屏息凝视，一连就是几个钟头，非把老鼠等出来不可！
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <div class="col4">
+                <img src="image/middle_left.png" alt="中部左" class="middle_left">
+            </div>
+            <div class="col8">
+                <img src="image/middle_right.png" alt="中部右" class="middle_right">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="image/footer.png" alt="底部">
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/vc.js"></script>
+
+    <script>
+        $(".like img").click(show);
+
+        function show() {
+
+            // alert("我被点击了");
+            var num = $(".number").html();
+            num = parseInt(num);
+            num += 1;
+            $(".number").html(num);
+            localStorage.setItem("num", num);
+
+        };
+        if (localStorage.getItem("num") != null) {
+            $(".number").html(localStorage.getItem("num"));
+        }
+
+        var pro = 0;
+        var lv = 1;
+
+        if (localStorage.getItem("progress") != null) {
+            pro = parseInt(localStorage.getItem("progress"));
+        }
+        if (localStorage.getItem("Lv") != null) {
+            lv = parseInt(localStorage.getItem("Lv"));
+        }
+
+        $(".color").width(pro + "%");
+        $(".color").html(pro + "%");
+        $(".grade").html("Lv" + lv);
+
+        $(".button").click(diamond);
+
+        $("portrait").click(setname);
+
+        function setname() {
+            $("h4").html("矮小脚");
+        }
+
+        if (localStorage.getItem("my") == null) {
+            alert("你好");
+            localStorage.setItem("my", "qqq");
+        }
+
+        function diamond() {
+            pro = pro + 10;
+            if (pro == 100) {
+                pro = 0;
+                lv += 1;
+
+            }
+            $(".color").width(pro + "%");
+            $(".color").html(pro + "%");
+            $(".grade").html("Lv" + lv);
+            localStorage.setItem("Lv", lv);
+            localStorage.setItem("progress", pro)
+
+        }
+        //$("#logo").click(logo);
+
+        // function logo() {
+        //     alert("您已解锁隐藏彩蛋！")
+        // }
+
+        // $("h4").click(nlikename);
+
+        // function nlikename() {
+        //     alert("您已解锁隐藏彩蛋2！")
+        // }
+        // $(".button_123").click(button);
+
+        // function button() {
+        //     alert("充值系统暂未开发。")
+        // }
+
+        // $(".button_122").click(video);
+
+        // function video() {
+        //     alert("充值系统暂未开发。")
+        // }
+    </script>
+</body>
+
+</html>
